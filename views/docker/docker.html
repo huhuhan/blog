@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker 命令总结 | 寒冷如铁</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <script language="javascript" type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/blog/js/MouseClickEffect.js"></script>
+    <meta name="description" content="好奇就尝试，喜欢就坚持！">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.01ca31a9.css" as="style"><link rel="preload" href="/blog/assets/js/app.48fbceba.js" as="script"><link rel="preload" href="/blog/assets/js/3.6aecd760.js" as="script"><link rel="preload" href="/blog/assets/js/1.be01cd42.js" as="script"><link rel="preload" href="/blog/assets/js/23.88585ff6.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.97bb739b.js"><link rel="prefetch" href="/blog/assets/js/11.4914fba6.js"><link rel="prefetch" href="/blog/assets/js/12.7b72af52.js"><link rel="prefetch" href="/blog/assets/js/13.6e829486.js"><link rel="prefetch" href="/blog/assets/js/14.c73587f7.js"><link rel="prefetch" href="/blog/assets/js/15.5c0741f3.js"><link rel="prefetch" href="/blog/assets/js/16.660c2708.js"><link rel="prefetch" href="/blog/assets/js/17.a980ca2e.js"><link rel="prefetch" href="/blog/assets/js/18.d571da99.js"><link rel="prefetch" href="/blog/assets/js/19.d926fc68.js"><link rel="prefetch" href="/blog/assets/js/20.90ca4752.js"><link rel="prefetch" href="/blog/assets/js/21.6c8ba874.js"><link rel="prefetch" href="/blog/assets/js/22.61f15ce5.js"><link rel="prefetch" href="/blog/assets/js/24.61b7cfd9.js"><link rel="prefetch" href="/blog/assets/js/25.2979295c.js"><link rel="prefetch" href="/blog/assets/js/26.136a20d7.js"><link rel="prefetch" href="/blog/assets/js/27.a7ab0701.js"><link rel="prefetch" href="/blog/assets/js/28.ad4234eb.js"><link rel="prefetch" href="/blog/assets/js/29.59494356.js"><link rel="prefetch" href="/blog/assets/js/30.643338cc.js"><link rel="prefetch" href="/blog/assets/js/31.7f64a278.js"><link rel="prefetch" href="/blog/assets/js/32.bea4dda2.js"><link rel="prefetch" href="/blog/assets/js/33.e203752a.js"><link rel="prefetch" href="/blog/assets/js/34.e92e5a06.js"><link rel="prefetch" href="/blog/assets/js/35.98217263.js"><link rel="prefetch" href="/blog/assets/js/36.16a526e5.js"><link rel="prefetch" href="/blog/assets/js/37.9b5be288.js"><link rel="prefetch" href="/blog/assets/js/38.89b9e4cf.js"><link rel="prefetch" href="/blog/assets/js/39.b33f1d92.js"><link rel="prefetch" href="/blog/assets/js/4.789e3d50.js"><link rel="prefetch" href="/blog/assets/js/40.bbb746b7.js"><link rel="prefetch" href="/blog/assets/js/41.81f131ab.js"><link rel="prefetch" href="/blog/assets/js/42.474cb45b.js"><link rel="prefetch" href="/blog/assets/js/43.fe269b94.js"><link rel="prefetch" href="/blog/assets/js/44.123909bf.js"><link rel="prefetch" href="/blog/assets/js/45.85e17df3.js"><link rel="prefetch" href="/blog/assets/js/46.d4946e59.js"><link rel="prefetch" href="/blog/assets/js/47.23e5676d.js"><link rel="prefetch" href="/blog/assets/js/48.cd683d9e.js"><link rel="prefetch" href="/blog/assets/js/49.50ed75e0.js"><link rel="prefetch" href="/blog/assets/js/5.01840e8d.js"><link rel="prefetch" href="/blog/assets/js/50.b8d794d9.js"><link rel="prefetch" href="/blog/assets/js/51.7f544d8b.js"><link rel="prefetch" href="/blog/assets/js/52.ff9c7071.js"><link rel="prefetch" href="/blog/assets/js/53.3d60754c.js"><link rel="prefetch" href="/blog/assets/js/54.c16fde39.js"><link rel="prefetch" href="/blog/assets/js/55.d8bb3990.js"><link rel="prefetch" href="/blog/assets/js/56.96395e5f.js"><link rel="prefetch" href="/blog/assets/js/57.047ce1b3.js"><link rel="prefetch" href="/blog/assets/js/58.ce766e49.js"><link rel="prefetch" href="/blog/assets/js/59.81e52f84.js"><link rel="prefetch" href="/blog/assets/js/6.94b10ce8.js"><link rel="prefetch" href="/blog/assets/js/60.e63008d3.js"><link rel="prefetch" href="/blog/assets/js/61.4a052d92.js"><link rel="prefetch" href="/blog/assets/js/62.220c4af8.js"><link rel="prefetch" href="/blog/assets/js/63.517c928f.js"><link rel="prefetch" href="/blog/assets/js/64.d3c1e4eb.js"><link rel="prefetch" href="/blog/assets/js/65.3b8e9eba.js"><link rel="prefetch" href="/blog/assets/js/66.2f463277.js"><link rel="prefetch" href="/blog/assets/js/67.2a90af5f.js"><link rel="prefetch" href="/blog/assets/js/68.aacdaa46.js"><link rel="prefetch" href="/blog/assets/js/69.42b7a9b0.js"><link rel="prefetch" href="/blog/assets/js/7.63c57787.js"><link rel="prefetch" href="/blog/assets/js/70.9dbc2432.js"><link rel="prefetch" href="/blog/assets/js/71.1172d9ad.js"><link rel="prefetch" href="/blog/assets/js/72.db1b51ad.js"><link rel="prefetch" href="/blog/assets/js/73.cd8e6d83.js"><link rel="prefetch" href="/blog/assets/js/74.e79b640b.js"><link rel="prefetch" href="/blog/assets/js/75.8325077c.js"><link rel="prefetch" href="/blog/assets/js/76.1a23476c.js"><link rel="prefetch" href="/blog/assets/js/77.81dab7dd.js"><link rel="prefetch" href="/blog/assets/js/78.84c7cec2.js"><link rel="prefetch" href="/blog/assets/js/79.316dd645.js"><link rel="prefetch" href="/blog/assets/js/8.496901ef.js"><link rel="prefetch" href="/blog/assets/js/80.a010d785.js"><link rel="prefetch" href="/blog/assets/js/81.ec077e16.js"><link rel="prefetch" href="/blog/assets/js/82.42ae540f.js"><link rel="prefetch" href="/blog/assets/js/83.24b93fad.js"><link rel="prefetch" href="/blog/assets/js/84.2babe20b.js"><link rel="prefetch" href="/blog/assets/js/85.5ff48ca8.js"><link rel="prefetch" href="/blog/assets/js/9.0ed04424.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.01ca31a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>寒冷如铁</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>寒铁</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">寒冷如铁</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/build/" class="nav-link"><i class="iconfont undefined"></i>
+  build
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/db/" class="nav-link"><i class="iconfont undefined"></i>
+  db
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/workflow/" class="nav-link"><i class="iconfont undefined"></i>
+  workflow
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/source/" class="nav-link"><i class="iconfont undefined"></i>
+  source
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/network/" class="nav-link"><i class="iconfont undefined"></i>
+  network
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/project/" class="nav-link"><i class="iconfont undefined"></i>
+  project
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/share/" class="nav-link"><i class="iconfont undefined"></i>
+  share
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/software/" class="nav-link"><i class="iconfont undefined"></i>
+  software
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/solution/" class="nav-link"><i class="iconfont undefined"></i>
+  solution
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/tomcat/" class="nav-link"><i class="iconfont undefined"></i>
+  tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/web/" class="nav-link"><i class="iconfont undefined"></i>
+  web
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/views/guide.html" class="nav-link"><i class="iconfont reco-other"></i>
+  记录
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      外链
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/huhuhan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/huhu_han" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  有道云笔记
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  LeadCloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://cloud.seafile.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Seafile
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://huhu_han.gitee.io/downgit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  DownGit
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><img src="/blog/avatar.png" alt="author-avatar" class="personal-img" data-v-b038cec6> <h3 class="name" data-v-b038cec6>
+    寒铁
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>71</h3> <h6 data-v-b038cec6>文章</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>18</h3> <h6 data-v-b038cec6>标签</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/build/" class="nav-link"><i class="iconfont undefined"></i>
+  build
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/db/" class="nav-link"><i class="iconfont undefined"></i>
+  db
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/workflow/" class="nav-link"><i class="iconfont undefined"></i>
+  workflow
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/source/" class="nav-link"><i class="iconfont undefined"></i>
+  source
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/network/" class="nav-link"><i class="iconfont undefined"></i>
+  network
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/project/" class="nav-link"><i class="iconfont undefined"></i>
+  project
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/share/" class="nav-link"><i class="iconfont undefined"></i>
+  share
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/software/" class="nav-link"><i class="iconfont undefined"></i>
+  software
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/solution/" class="nav-link"><i class="iconfont undefined"></i>
+  solution
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/tomcat/" class="nav-link"><i class="iconfont undefined"></i>
+  tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/web/" class="nav-link"><i class="iconfont undefined"></i>
+  web
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/views/guide.html" class="nav-link"><i class="iconfont reco-other"></i>
+  记录
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      外链
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/huhuhan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/huhu_han" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  有道云笔记
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  LeadCloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://cloud.seafile.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Seafile
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://huhu_han.gitee.io/downgit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  DownGit
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Docker 命令总结</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/views/docker/docker.html#基础命令" class="sidebar-link">基础命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/docker/docker.html#镜像命令" class="sidebar-link">镜像命令</a></li><li class="sidebar-sub-header"><a href="/blog/views/docker/docker.html#容器命令" class="sidebar-link">容器命令</a></li><li class="sidebar-sub-header"><a href="/blog/views/docker/docker.html#网络命令" class="sidebar-link">网络命令</a></li><li class="sidebar-sub-header"><a href="/blog/views/docker/docker.html#其他命令" class="sidebar-link">其他命令</a></li><li class="sidebar-sub-header"><a href="/blog/views/docker/docker.html#个人账户" class="sidebar-link">个人账户</a></li><li class="sidebar-sub-header"><a href="/blog/views/docker/docker.html#集群命令" class="sidebar-link">集群命令</a></li></ul></li><li><a href="/blog/views/docker/docker.html#docker-compose" class="sidebar-link">Docker-Compose</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/docker/docker.html#常用命令" class="sidebar-link">常用命令</a></li><li class="sidebar-sub-header"><a href="/blog/views/docker/docker.html#脚本参考" class="sidebar-link">脚本参考</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Docker 命令总结</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>寒铁</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2022
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>Docker 命令总结</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>寒铁</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-02-28</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/blog/views/docker/docker.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      docker
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="基础命令"><a href="#基础命令" class="header-anchor">#</a> 基础命令</h2> <blockquote><p><code>docker image xxx</code>、<code>docker container xxx</code>
+部分命令都可省略<code>image</code>、<code>container</code>，建议加上，清楚命令所属集;</p> <p>docker ID 命令可以只打前几个字符，只有唯一就可执行</p></blockquote> <h3 id="镜像命令"><a href="#镜像命令" class="header-anchor">#</a> 镜像命令</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 列出本机的所有镜像文件。</span>
+docker image <span class="token function">ls</span>
+docker image <span class="token function">ls</span> -all
+
+<span class="token comment"># 删除镜像文件，前提镜像生成的容器需要先删除，否则报错</span>
+docker image <span class="token function">rm</span> <span class="token punctuation">[</span>imageName<span class="token punctuation">]</span>
+
+<span class="token comment"># 拉取镜像，默认官方镜像仓库可省略</span>
+docker image pull <span class="token punctuation">[</span>仓库镜像带版本号<span class="token punctuation">]</span>
+docker image pull hello-world
+docker image pull registry.cn-shanghai.aliyuncs.com/huhuhan/iot:1.0
+
+<span class="token comment"># 制作镜像</span>
+docker image build -t <span class="token punctuation">[</span>镜像名<span class="token punctuation">]</span>:<span class="token punctuation">[</span>版本号<span class="token punctuation">]</span> <span class="token builtin class-name">.</span>
+<span class="token comment"># 指定别名DockerFile构建，指定构建的根目录</span>
+docker image build -t <span class="token punctuation">[</span>镜像名<span class="token punctuation">]</span>:<span class="token punctuation">[</span>版本号<span class="token punctuation">]</span> -f <span class="token punctuation">[</span>Dockfile的绝对路径<span class="token punctuation">]</span> <span class="token punctuation">[</span>根目录<span class="token punctuation">]</span>
+docker image build -t testImg:V99 -f /home/test/Dockerfile-my /home/test
+
+<span class="token comment"># 镜像标记为远程仓库镜像</span>
+docker image tag <span class="token punctuation">[</span>imageName<span class="token punctuation">]</span> <span class="token punctuation">[</span>username<span class="token punctuation">]</span>/<span class="token punctuation">[</span>repository<span class="token punctuation">]</span>:<span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
+<span class="token comment"># 制作远程仓库镜像</span>
+docker image build -t <span class="token punctuation">[</span>username<span class="token punctuation">]</span>/<span class="token punctuation">[</span>repository<span class="token punctuation">]</span>:<span class="token punctuation">[</span>tag<span class="token punctuation">]</span> <span class="token builtin class-name">.</span>
+<span class="token comment"># 推送远程仓库镜像</span>
+docker push <span class="token punctuation">[</span>仓库<span class="token punctuation">]</span>/<span class="token punctuation">[</span>命名空间<span class="token punctuation">]</span>/<span class="token punctuation">[</span>镜像<span class="token punctuation">]</span>:<span class="token punctuation">[</span>版本号<span class="token punctuation">]</span>
+
+<span class="token comment"># 实例：阿里云镜像仓库，需指定参库名，[仓库]/[命名空间]/[镜像]:[版本号]</span>
+docker image tag iot:1.0 registry.cn-shanghai.aliyuncs.com/huhuhan/iot:2.0
+
+<span class="token comment"># 查看镜像构建信息</span>
+docker image  <span class="token function">history</span> <span class="token punctuation">[</span>imageName<span class="token punctuation">]</span>
+
+<span class="token comment"># 离线保存镜像</span>
+docker save -o <span class="token punctuation">[</span>文件路径<span class="token punctuation">]</span> <span class="token punctuation">[</span>镜像<span class="token punctuation">]</span>
+<span class="token comment"># 离线加载镜像</span>
+docker load -i <span class="token punctuation">[</span>文件路径<span class="token punctuation">]</span>
+<span class="token comment"># 离线创建镜像</span>
+docker <span class="token function">import</span> <span class="token punctuation">[</span>文件路径<span class="token punctuation">]</span> <span class="token punctuation">[</span>新镜像<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><h3 id="容器命令"><a href="#容器命令" class="header-anchor">#</a> 容器命令</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 运行镜像，自动生成一个容器，可生成多个；</span>
+docker container run hello-world
+<span class="token comment"># 常用参数例子：iot镜像</span>
+<span class="token comment"># --restart always 保证自动重启</span>
+<span class="token comment"># --name [别名] [镜像] 必须写在运行run的参数的后面</span>
+<span class="token comment"># -d 后台挂起运行</span>
+<span class="token comment"># -p 端口映射[外部:内部]</span>
+<span class="token comment"># -v 容器内部挂载主机目录，linux的当前目录写法$PWD，window的当前目录写法%cd%</span>
+<span class="token comment"># -it 容器shell映射到当前窗口，最后加上 /bin/bash 表示执行第一条命令，打开内部shell</span>
+<span class="token comment"># 实例</span>
+docker run --name tomcat -p <span class="token number">8080</span>:8080 -v <span class="token environment constant">$PWD</span>/test:/usr/local/tomcat/webapps/test -d tomcat:8.5
+
+<span class="token comment"># 列出本机正在运行的容器，包括终止运行的容器</span>
+docker container <span class="token function">ls</span>
+docker container <span class="token function">ls</span> --all
+
+<span class="token comment"># 启动、停止、删除、停止删除容器，id（不用写全）或上述定义的别名</span>
+docker container stop <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>
+docker container start <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>
+docker container <span class="token function">rm</span> <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>
+docker container <span class="token function">kill</span> <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>
+
+<span class="token comment"># 查看日志 f参数表示查看实时日志</span>
+docker container logs <span class="token punctuation">[</span>-f<span class="token punctuation">]</span> <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>
+<span class="token comment"># 复制</span>
+docker container <span class="token function">cp</span> <span class="token punctuation">[</span>source<span class="token punctuation">]</span> <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>:<span class="token punctuation">[</span>targert<span class="token punctuation">]</span>
+docker container <span class="token function">cp</span> <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>:<span class="token punctuation">[</span>targert<span class="token punctuation">]</span> <span class="token punctuation">[</span>source<span class="token punctuation">]</span>
+<span class="token comment"># 当前目录下的所有文件</span>
+docker container <span class="token function">cp</span> /. <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>:<span class="token punctuation">[</span>targert<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><h3 id="网络命令"><a href="#网络命令" class="header-anchor">#</a> 网络命令</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker network <span class="token function">ls</span>
+docker network create <span class="token punctuation">[</span>NAME<span class="token punctuation">]</span>
+docker network <span class="token function">rm</span> <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>
+<span class="token comment"># 某网络添加某容器</span>
+docker network connect <span class="token punctuation">[</span>网络ID或NAME<span class="token punctuation">]</span> <span class="token punctuation">[</span>容器ID或NAME<span class="token punctuation">]</span>
+<span class="token comment"># 某网络断连某容器，适用于容器端口占用，断开网络端口</span>
+docker network disconnect <span class="token punctuation">[</span>--force<span class="token punctuation">]</span> <span class="token punctuation">[</span>网络ID或NAME<span class="token punctuation">]</span> <span class="token punctuation">[</span>容器ID或NAME<span class="token punctuation">]</span>
+<span class="token comment"># 查看当前网络的信息，如连接的容器</span>
+docker network inspect <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="其他命令"><a href="#其他命令" class="header-anchor">#</a> 其他命令</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入容器内部linux环境</span>
+docker <span class="token builtin class-name">exec</span> -it iot /bin/bash
+<span class="token comment"># 直接控制容器内部命令，如停止gitlab容器</span>
+docker <span class="token builtin class-name">exec</span> -it gitlab gitlab-ctl stop
+
+<span class="token comment"># 查看运行容器</span>
+docker <span class="token function">ps</span> <span class="token punctuation">[</span>--filter <span class="token assign-left variable">name</span><span class="token operator">=</span>xxx<span class="token punctuation">]</span>
+docker <span class="token function">top</span> <span class="token punctuation">[</span>ID或NAME<span class="token punctuation">]</span>
+<span class="token comment"># 监控容器使用情况</span>
+docker stats
+docker stats --no-stream --format <span class="token string">&quot;table{{.Name}}<span class="token entity" title="\t">\t</span>{{.CPUPerc}}<span class="token entity" title="\t">\t</span>{{.MemUsage}}&quot;</span>
+docker stats <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> --format <span class="token string">'{{.Names}}'</span><span class="token variable">)</span></span>
+
+<span class="token comment"># 容器卷标</span>
+docker volume <span class="token function">ls</span>
+docker volume inspect <span class="token punctuation">[</span>id、name<span class="token punctuation">]</span>
+
+<span class="token comment"># 批量删除镜像</span>
+docker rmi <span class="token variable"><span class="token variable">`</span>docker image <span class="token function">ls</span> --all <span class="token operator">|</span> <span class="token function">grep</span>  <span class="token string">&quot;&lt;none&gt;&quot;</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$3</span>}'</span><span class="token variable">`</span></span>
+<span class="token comment"># windows</span>
+docker rmi <span class="token variable"><span class="token variable">$(</span>docker images -f <span class="token string">&quot;dangling=true&quot;</span> -q<span class="token variable">)</span></span>
+
+<span class="token comment"># 非root用户无权限执行docker，附加权限</span>
+<span class="token comment"># 添加docker用户组</span>
+<span class="token function">sudo</span> <span class="token function">groupadd</span> docker     
+<span class="token comment"># 将登陆用户加入到docker用户组中，$USER表示用户名</span>
+<span class="token function">sudo</span> gpasswd -a <span class="token environment constant">$USER</span> docker 
+<span class="token comment"># 更新用户组   </span>
+newgrp docker     
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><h3 id="个人账户"><a href="#个人账户" class="header-anchor">#</a> 个人账户</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 阿里仓库账户，密码为docker+1号数字</span>
+docker login --username<span class="token operator">=</span>糊糊_晗 registry.cn-shanghai.aliyuncs.com
+<span class="token comment"># 命名空间</span>
+registry.cn-shanghai.aliyuncs.com/huhuhan/xxxxxxxxxxx
+
+<span class="token comment"># DockerHub，拼音/二级密码</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="集群命令"><a href="#集群命令" class="header-anchor">#</a> 集群命令</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># manager节点命令</span>
+<span class="token comment"># 初始化</span>
+docker swarm init
+<span class="token comment"># 获取加入集群的命令</span>
+docker swarm join-token worker
+docker swarm join-token manager
+
+<span class="token comment"># 查看节点</span>
+docker node <span class="token function">ls</span>
+<span class="token comment"># 降级，manager节点改为worker节点</span>
+docker node demote <span class="token punctuation">[</span>node<span class="token punctuation">]</span>
+<span class="token comment"># 升级，worke节点改为manager节点</span>
+docker node promote <span class="token punctuation">[</span>node<span class="token punctuation">]</span>
+<span class="token comment"># 修改节点参数</span>
+docker node update <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token punctuation">[</span>node<span class="token punctuation">]</span>
+<span class="token comment"># 删除节点</span>
+docker node <span class="token function">rm</span> <span class="token punctuation">[</span>-f<span class="token punctuation">]</span> <span class="token punctuation">[</span>node<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># worker节点命令</span>
+<span class="token comment"># 如下，根据上面manager节点执行命令获取，token有效期24小时</span>
+docker swarm <span class="token function">join</span> --token SWMTKN-1-3ucqaz33fypayldmv4xrhpiw5rrg2vj83mqal77q3ei2a7dfsy-d8jn6u7tppczuz60pm7iabmtv <span class="token number">192.168</span>.0.82:2377
+<span class="token comment"># 离开集群，集群节点状态为down</span>
+docker swarm leave
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="docker-compose"><a href="#docker-compose" class="header-anchor">#</a> Docker-Compose</h2> <h3 id="常用命令"><a href="#常用命令" class="header-anchor">#</a> 常用命令</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>docker-compose --version
+
+docker-compose -h                           <span class="token comment"># 查看帮助</span>
+
+docker-compose up                           <span class="token comment"># 创建并运行所有容器</span>
+docker-compose up -d                        <span class="token comment"># 创建并后台运行所有容器</span>
+docker-compose -f docker-compose.yml up -d  <span class="token comment"># 指定模板</span>
+docker-compose down                         <span class="token comment"># 停止并删除容器、网络、卷、镜像。</span>
+docker-compose --volumes                    <span class="token comment"># 回收资源同时删除自定义的卷标，默认不加参数，自定义卷标保留</span>
+<span class="token comment"># 最后追加配置中的services，指定运行某个服务的命令，不支持down，适合up、logs、stop、rm等</span>
+docker-compose up -d hello-server
+
+docker-compose logs -f        <span class="token comment"># 查看容器输出日志，-f 实时</span>
+docker-compose pull           <span class="token comment"># 拉取依赖镜像</span>
+dokcer-compose config         <span class="token comment"># 检查配置</span>
+dokcer-compose config -q      <span class="token comment"># 检查配置，有问题才有输出</span>
+
+docker-compose restart   <span class="token comment"># 重启服务</span>
+docker-compose start     <span class="token comment"># 启动服务</span>
+docker-compose stop      <span class="token comment"># 停止服务</span>
+docker-compose <span class="token function">rm</span> -f <span class="token punctuation">[</span>serviceA<span class="token punctuation">]</span> 	<span class="token comment"># 删除指定服务，不在询问</span>
+
+docker-compose --compatibility up	<span class="token comment">#做了资源限制，指定参数</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h3 id="脚本参考"><a href="#脚本参考" class="header-anchor">#</a> 脚本参考</h3> <p><a href="https://www.cnblogs.com/zhujingzhi/p/9786622.html" target="_blank" rel="noopener noreferrer">参考博客<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token comment"># 版本号，不同版本的命名写法略有区别，若部分命令不起效可选降为3或2</span>
+<span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
+
+<span class="token comment"># 定义网络，命名格式[当前目录_default]</span>
+<span class="token comment"># 想修改前缀，在同级目录下创建.env文件，输入COMPOSE_PROJECT_NAME=aaa，即[aaa_default]</span>
+<span class="token key atrule">networks</span><span class="token punctuation">:</span>
+  <span class="token comment"># 默认网络，即[当前目录_default]，当前配置文件中的服务自动添加到这网络中</span>
+  <span class="token key atrule">default</span><span class="token punctuation">:</span>
+    <span class="token key atrule">driver</span><span class="token punctuation">:</span> bridge <span class="token comment">#host, bridge, none   </span>
+  <span class="token comment"># 自定义后缀，即[当前目录_myNet]，当前配置文件中的服务需要指定networks属性才生效</span>
+  <span class="token key atrule">myNet</span><span class="token punctuation">:</span>
+    <span class="token key atrule">driver</span><span class="token punctuation">:</span> bridge 
+  <span class="token comment"># 引用现有的网络，[aaa_myNet]，可通过docker network ls命令查看是否存在</span>
+  <span class="token key atrule">aaa_myNet</span><span class="token punctuation">:</span>
+	<span class="token key atrule">external</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>      
+      
+<span class="token comment"># 自定义卷标，数据存储</span>
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token key atrule">data1-1</span><span class="token punctuation">:</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+ <span class="token comment">#服务节点，适合多个服务启动</span>
+  <span class="token key atrule">web</span><span class="token punctuation">:</span>
+    <span class="token comment"># 启动后容器名</span>
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> iot<span class="token punctuation">-</span>ui
+    <span class="token comment"># 重启策略: always，容器退出时总是重启容器</span>
+    <span class="token comment"># 重启策略: unless-stopped，容器退出时总是重启容器但是不考虑在Docker守护进程启动时就已经停止了的容器</span>
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token comment"># image获取远程仓库镜像来运行，若有build属性，则作为构建的镜像名称</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> iot<span class="token punctuation">-</span>demo
+    <span class="token comment"># 构建镜像指定设定上下文根目录，然后以该目录为准指定Dockerfile</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span>
+      <span class="token comment">#执行构建时根目录</span>
+      <span class="token key atrule">context</span><span class="token punctuation">:</span> ./
+      <span class="token comment">#指定构建用的Dockerfile</span>
+      <span class="token key atrule">dockerfile</span><span class="token punctuation">:</span> docker/Dockerfile
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">TZ</span><span class="token punctuation">:</span> Asia/Shanghai
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 9901<span class="token punctuation">:</span><span class="token number">8700</span>
+    <span class="token comment"># 网络模式，即默认的模块，查看docker network ls 可得知</span>
+    <span class="token comment"># 若所有服务都配置了网络模式，这个docker-compose则不会生成新的网络</span>
+    <span class="token comment"># 与networks属性，仅一个起效</span>
+    <span class="token key atrule">network_mode</span><span class="token punctuation">:</span> bridge <span class="token comment">#host, bridge, none，&quot;service:[service name]&quot;，&quot;container:[container name/id]&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> myNet
+    <span class="token comment"># 连接其他容器，注意是容器名，适用于Nginx配置中以容器名+端口做服务端</span>
+    <span class="token key atrule">external_links</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> web<span class="token punctuation">-</span>api
+    <span class="token comment"># 保证启动顺序，注意是容器名，必须是当前docker-compose中的</span>
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> web<span class="token punctuation">-</span>api
+    <span class="token comment"># 添加到IP映射到容器内的/etc/hosts</span>
+    <span class="token key atrule">extra_hosts</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;my-mysql:192.168.0.31&quot;</span>
+    <span class="token comment"># 挂载映射</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token comment"># 绝对路径，即主机的路径</span>
+        <span class="token punctuation">-</span> /var/run/docker.sock<span class="token punctuation">:</span>/tmp/docker.sock
+        <span class="token comment"># 卷标相对路径</span>
+        <span class="token punctuation">-</span> data1<span class="token punctuation">-</span>1<span class="token punctuation">:</span>//tmp/test
+    <span class="token comment">#启动后执行命令，会覆盖Dockerfile里的CMD</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> consul<span class="token punctuation">:</span>//consul<span class="token punctuation">:</span><span class="token number">8500</span>
+    <span class="token comment"># 资源限制，启动命令加参数--compatibility</span>
+    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+     <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+     	<span class="token comment"># 最大资源，可通过docker stats查看</span>
+        <span class="token key atrule">limits</span><span class="token punctuation">:</span>
+           <span class="token key atrule">cpus</span><span class="token punctuation">:</span> <span class="token string">'2'</span>
+           <span class="token key atrule">memory</span><span class="token punctuation">:</span> 2G
+        <span class="token comment">## 保留的资料</span>
+        <span class="token key atrule">reservations</span><span class="token punctuation">:</span>
+           <span class="token key atrule">cpus</span><span class="token punctuation">:</span> <span class="token string">'0.5'</span>
+           <span class="token key atrule">memory</span><span class="token punctuation">:</span> 200M
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2021/12/1 下午2:07:28</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.48fbceba.js" defer></script><script src="/blog/assets/js/3.6aecd760.js" defer></script><script src="/blog/assets/js/1.be01cd42.js" defer></script><script src="/blog/assets/js/23.88585ff6.js" defer></script>
+  </body>
+</html>

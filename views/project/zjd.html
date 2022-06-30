@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>农村宅基地信息管理平台 - fw | 寒冷如铁</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <script language="javascript" type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/blog/js/MouseClickEffect.js"></script>
+    <meta name="description" content="好奇就尝试，喜欢就坚持！">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.01ca31a9.css" as="style"><link rel="preload" href="/blog/assets/js/app.48fbceba.js" as="script"><link rel="preload" href="/blog/assets/js/3.6aecd760.js" as="script"><link rel="preload" href="/blog/assets/js/1.be01cd42.js" as="script"><link rel="preload" href="/blog/assets/js/53.3d60754c.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.97bb739b.js"><link rel="prefetch" href="/blog/assets/js/11.4914fba6.js"><link rel="prefetch" href="/blog/assets/js/12.7b72af52.js"><link rel="prefetch" href="/blog/assets/js/13.6e829486.js"><link rel="prefetch" href="/blog/assets/js/14.c73587f7.js"><link rel="prefetch" href="/blog/assets/js/15.5c0741f3.js"><link rel="prefetch" href="/blog/assets/js/16.660c2708.js"><link rel="prefetch" href="/blog/assets/js/17.a980ca2e.js"><link rel="prefetch" href="/blog/assets/js/18.d571da99.js"><link rel="prefetch" href="/blog/assets/js/19.d926fc68.js"><link rel="prefetch" href="/blog/assets/js/20.90ca4752.js"><link rel="prefetch" href="/blog/assets/js/21.6c8ba874.js"><link rel="prefetch" href="/blog/assets/js/22.61f15ce5.js"><link rel="prefetch" href="/blog/assets/js/23.88585ff6.js"><link rel="prefetch" href="/blog/assets/js/24.61b7cfd9.js"><link rel="prefetch" href="/blog/assets/js/25.2979295c.js"><link rel="prefetch" href="/blog/assets/js/26.136a20d7.js"><link rel="prefetch" href="/blog/assets/js/27.a7ab0701.js"><link rel="prefetch" href="/blog/assets/js/28.ad4234eb.js"><link rel="prefetch" href="/blog/assets/js/29.59494356.js"><link rel="prefetch" href="/blog/assets/js/30.643338cc.js"><link rel="prefetch" href="/blog/assets/js/31.7f64a278.js"><link rel="prefetch" href="/blog/assets/js/32.bea4dda2.js"><link rel="prefetch" href="/blog/assets/js/33.e203752a.js"><link rel="prefetch" href="/blog/assets/js/34.e92e5a06.js"><link rel="prefetch" href="/blog/assets/js/35.98217263.js"><link rel="prefetch" href="/blog/assets/js/36.16a526e5.js"><link rel="prefetch" href="/blog/assets/js/37.9b5be288.js"><link rel="prefetch" href="/blog/assets/js/38.89b9e4cf.js"><link rel="prefetch" href="/blog/assets/js/39.b33f1d92.js"><link rel="prefetch" href="/blog/assets/js/4.789e3d50.js"><link rel="prefetch" href="/blog/assets/js/40.bbb746b7.js"><link rel="prefetch" href="/blog/assets/js/41.81f131ab.js"><link rel="prefetch" href="/blog/assets/js/42.474cb45b.js"><link rel="prefetch" href="/blog/assets/js/43.fe269b94.js"><link rel="prefetch" href="/blog/assets/js/44.123909bf.js"><link rel="prefetch" href="/blog/assets/js/45.85e17df3.js"><link rel="prefetch" href="/blog/assets/js/46.d4946e59.js"><link rel="prefetch" href="/blog/assets/js/47.23e5676d.js"><link rel="prefetch" href="/blog/assets/js/48.cd683d9e.js"><link rel="prefetch" href="/blog/assets/js/49.50ed75e0.js"><link rel="prefetch" href="/blog/assets/js/5.01840e8d.js"><link rel="prefetch" href="/blog/assets/js/50.b8d794d9.js"><link rel="prefetch" href="/blog/assets/js/51.7f544d8b.js"><link rel="prefetch" href="/blog/assets/js/52.ff9c7071.js"><link rel="prefetch" href="/blog/assets/js/54.c16fde39.js"><link rel="prefetch" href="/blog/assets/js/55.d8bb3990.js"><link rel="prefetch" href="/blog/assets/js/56.96395e5f.js"><link rel="prefetch" href="/blog/assets/js/57.047ce1b3.js"><link rel="prefetch" href="/blog/assets/js/58.ce766e49.js"><link rel="prefetch" href="/blog/assets/js/59.81e52f84.js"><link rel="prefetch" href="/blog/assets/js/6.94b10ce8.js"><link rel="prefetch" href="/blog/assets/js/60.e63008d3.js"><link rel="prefetch" href="/blog/assets/js/61.4a052d92.js"><link rel="prefetch" href="/blog/assets/js/62.220c4af8.js"><link rel="prefetch" href="/blog/assets/js/63.517c928f.js"><link rel="prefetch" href="/blog/assets/js/64.d3c1e4eb.js"><link rel="prefetch" href="/blog/assets/js/65.3b8e9eba.js"><link rel="prefetch" href="/blog/assets/js/66.2f463277.js"><link rel="prefetch" href="/blog/assets/js/67.2a90af5f.js"><link rel="prefetch" href="/blog/assets/js/68.aacdaa46.js"><link rel="prefetch" href="/blog/assets/js/69.42b7a9b0.js"><link rel="prefetch" href="/blog/assets/js/7.63c57787.js"><link rel="prefetch" href="/blog/assets/js/70.9dbc2432.js"><link rel="prefetch" href="/blog/assets/js/71.1172d9ad.js"><link rel="prefetch" href="/blog/assets/js/72.db1b51ad.js"><link rel="prefetch" href="/blog/assets/js/73.cd8e6d83.js"><link rel="prefetch" href="/blog/assets/js/74.e79b640b.js"><link rel="prefetch" href="/blog/assets/js/75.8325077c.js"><link rel="prefetch" href="/blog/assets/js/76.1a23476c.js"><link rel="prefetch" href="/blog/assets/js/77.81dab7dd.js"><link rel="prefetch" href="/blog/assets/js/78.84c7cec2.js"><link rel="prefetch" href="/blog/assets/js/79.316dd645.js"><link rel="prefetch" href="/blog/assets/js/8.496901ef.js"><link rel="prefetch" href="/blog/assets/js/80.a010d785.js"><link rel="prefetch" href="/blog/assets/js/81.ec077e16.js"><link rel="prefetch" href="/blog/assets/js/82.42ae540f.js"><link rel="prefetch" href="/blog/assets/js/83.24b93fad.js"><link rel="prefetch" href="/blog/assets/js/84.2babe20b.js"><link rel="prefetch" href="/blog/assets/js/85.5ff48ca8.js"><link rel="prefetch" href="/blog/assets/js/9.0ed04424.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.01ca31a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>寒冷如铁</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>寒铁</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">寒冷如铁</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/build/" class="nav-link"><i class="iconfont undefined"></i>
+  build
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/db/" class="nav-link"><i class="iconfont undefined"></i>
+  db
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/workflow/" class="nav-link"><i class="iconfont undefined"></i>
+  workflow
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/source/" class="nav-link"><i class="iconfont undefined"></i>
+  source
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/network/" class="nav-link"><i class="iconfont undefined"></i>
+  network
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/project/" class="nav-link"><i class="iconfont undefined"></i>
+  project
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/share/" class="nav-link"><i class="iconfont undefined"></i>
+  share
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/software/" class="nav-link"><i class="iconfont undefined"></i>
+  software
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/solution/" class="nav-link"><i class="iconfont undefined"></i>
+  solution
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/tomcat/" class="nav-link"><i class="iconfont undefined"></i>
+  tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/web/" class="nav-link"><i class="iconfont undefined"></i>
+  web
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/views/guide.html" class="nav-link"><i class="iconfont reco-other"></i>
+  记录
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      外链
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/huhuhan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/huhu_han" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  有道云笔记
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  LeadCloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://cloud.seafile.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Seafile
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://huhu_han.gitee.io/downgit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  DownGit
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><img src="/blog/avatar.png" alt="author-avatar" class="personal-img" data-v-b038cec6> <h3 class="name" data-v-b038cec6>
+    寒铁
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>71</h3> <h6 data-v-b038cec6>文章</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>18</h3> <h6 data-v-b038cec6>标签</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/build/" class="nav-link"><i class="iconfont undefined"></i>
+  build
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/db/" class="nav-link"><i class="iconfont undefined"></i>
+  db
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/workflow/" class="nav-link"><i class="iconfont undefined"></i>
+  workflow
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/source/" class="nav-link"><i class="iconfont undefined"></i>
+  source
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/network/" class="nav-link"><i class="iconfont undefined"></i>
+  network
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/project/" class="nav-link"><i class="iconfont undefined"></i>
+  project
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/share/" class="nav-link"><i class="iconfont undefined"></i>
+  share
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/software/" class="nav-link"><i class="iconfont undefined"></i>
+  software
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/solution/" class="nav-link"><i class="iconfont undefined"></i>
+  solution
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/tomcat/" class="nav-link"><i class="iconfont undefined"></i>
+  tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/web/" class="nav-link"><i class="iconfont undefined"></i>
+  web
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/views/guide.html" class="nav-link"><i class="iconfont reco-other"></i>
+  记录
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      外链
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/huhuhan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/huhu_han" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  有道云笔记
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  LeadCloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://cloud.seafile.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Seafile
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://huhu_han.gitee.io/downgit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  DownGit
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>农村宅基地信息管理平台 - fw</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/views/project/zjd.html#农村宅基地信息管理平台" class="sidebar-link">农村宅基地信息管理平台</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/views/project/zjd.html#项目介绍" class="sidebar-link">项目介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#一体化控制中心平台" class="sidebar-link">一体化控制中心平台</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#农村宅基地管理平台" class="sidebar-link">农村宅基地管理平台</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#农村宅基地报表系统" class="sidebar-link">农村宅基地报表系统</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#农村宅基地任务调度系统" class="sidebar-link">农村宅基地任务调度系统</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#农村宅基地查监管应用" class="sidebar-link">农村宅基地查监管应用</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#建库软件" class="sidebar-link">建库软件</a></li></ul></li><li><a href="/blog/views/project/zjd.html#农村宅基地管理平台-2" class="sidebar-link">农村宅基地管理平台</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#三权信息" class="sidebar-link">三权信息</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#一张图" class="sidebar-link">一张图</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#联合审批" class="sidebar-link">联合审批</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#数据分析" class="sidebar-link">数据分析</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#执法监管" class="sidebar-link">执法监管</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#档案管理" class="sidebar-link">档案管理</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#其他模块" class="sidebar-link">其他模块</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#功能配置" class="sidebar-link">功能配置</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#基本信息" class="sidebar-link">基本信息</a></li></ul></li><li><a href="/blog/views/project/zjd.html#项目功能设计" class="sidebar-link">项目功能设计</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#签名盖章" class="sidebar-link">签名盖章</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#证书生成" class="sidebar-link">证书生成</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#路由菜单" class="sidebar-link">路由菜单</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#表单配置" class="sidebar-link">表单配置</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#流程配置" class="sidebar-link">流程配置</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#附件上传" class="sidebar-link">附件上传</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#表单打印" class="sidebar-link">表单打印</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#地图配置" class="sidebar-link">地图配置</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#系统配置" class="sidebar-link">系统配置</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#其他可配置化" class="sidebar-link">其他可配置化</a></li></ul></li><li><a href="/blog/views/project/zjd.html#项目版本" class="sidebar-link">项目版本</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#迭代版本" class="sidebar-link">迭代版本</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#地区应用" class="sidebar-link">地区应用</a></li></ul></li><li><a href="/blog/views/project/zjd.html#项目架构" class="sidebar-link">项目架构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#后端结构" class="sidebar-link">后端结构</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#前端结构" class="sidebar-link">前端结构</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#应用服务" class="sidebar-link">应用服务</a></li></ul></li><li><a href="/blog/views/project/zjd.html#数据库设计" class="sidebar-link">数据库设计</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#业务服务" class="sidebar-link">业务服务</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#基础服务" class="sidebar-link">基础服务</a></li></ul></li><li><a href="/blog/views/project/zjd.html#技术架构" class="sidebar-link">技术架构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#后端技术栈" class="sidebar-link">后端技术栈</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#前端技术栈" class="sidebar-link">前端技术栈</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#政务网访问" class="sidebar-link">政务网访问</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#服务监控" class="sidebar-link">服务监控</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#服务器配置" class="sidebar-link">服务器配置</a></li><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#自动化构建" class="sidebar-link">自动化构建</a></li></ul></li><li><a href="/blog/views/project/zjd.html#相关文档" class="sidebar-link">相关文档</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/views/project/zjd.html#问题处理" class="sidebar-link">问题处理</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/views/project/zjd.html#其他" class="sidebar-link">其他</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/project/zjd.html#一体化控制中心平台-2" class="sidebar-link">一体化控制中心平台</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>农村宅基地信息管理平台 - fw</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>寒铁</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2022
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>农村宅基地信息管理平台 - fw</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>寒铁</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-10-09</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/blog/views/project/zjd.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      project
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="农村宅基地信息管理平台"><a href="#农村宅基地信息管理平台" class="header-anchor">#</a> 农村宅基地信息管理平台</h2> <p>根据国家宅基地建房标准相关政策，为了加快农村宅基地建房工作，提高工作效率和服务水平，以数字化形式进行信息管理，支持各地区特色定制功能的一套完整宅基地信息管理平台。</p> <h2 id="项目介绍"><a href="#项目介绍" class="header-anchor">#</a> 项目介绍</h2> <h3 id="一体化控制中心平台"><a href="#一体化控制中心平台" class="header-anchor">#</a> 一体化控制中心平台</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>后台管理系统
+web端独立应用，适用于公司所有项目
+负责管理用户、角色、组织、行政区划等基本信息
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="农村宅基地管理平台"><a href="#农村宅基地管理平台" class="header-anchor">#</a> 农村宅基地管理平台</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>主业务系统
+web端应用，基于一体化控制中心平台单点登录
+负责管理宅基地信息
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="农村宅基地报表系统"><a href="#农村宅基地报表系统" class="header-anchor">#</a> 农村宅基地报表系统</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>主业务扩展系统
+web端应用，基于一体化控制中心平台单点登录
+负责提供报表数据，支持常规报表和大屏报表
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="农村宅基地任务调度系统"><a href="#农村宅基地任务调度系统" class="header-anchor">#</a> 农村宅基地任务调度系统</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>主业务扩展系统
+web端应用，基于一体化控制中心平台单点登录
+负责处理宅基地的定时任务调度
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="农村宅基地查监管应用"><a href="#农村宅基地查监管应用" class="header-anchor">#</a> 农村宅基地查监管应用</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>主业务扩展应用
+手机应用，基于一体化控制中心平台单点登录
+功能：
+	部分web端功能
+	负责线下到场搜集数据
+版本：
+	安卓版本
+	H5版本，适用微信小程序、接入第三方应用（浙里办、浙政钉）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="建库软件"><a href="#建库软件" class="header-anchor">#</a> 建库软件</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>辅助系统
+pc端独立应用
+负责前期数据搜集、绘制地图
+对接方式：
+	生成地图文件，发布至geoserver
+	生成基本数据（宅基地空间数据），导入主业务数据库、发布至geoserver
+	生成基本数据（农户信息等等），导入主业务数据库。（主业务系统也有入口，各地区版本需求不同）
+
+有多个功能版本，比如不动产权建库软件、两区规划建库软件等
+有对应的调查APP（安卓），用于搜集数据
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="农村宅基地管理平台-2"><a href="#农村宅基地管理平台-2" class="header-anchor">#</a> 农村宅基地管理平台</h2> <blockquote><p>宅基地的核心业务和功能，大部分支持web端和app端</p></blockquote> <h3 id="三权信息"><a href="#三权信息" class="header-anchor">#</a> 三权信息</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>描述：核心基础，管理宅基地的相关权力人。数据来源基本是来自库管软件入库
+
+农户管理：
+	数据对象：农户（户主）、农户成员
+	功能：增删改查、导入、导出
+所有权人管理：
+	数据对象：所有权人（即农村集体经济组织、村民委员会或村民小组的代表）（代码即统一社会信用代码）
+	功能：增删改查、导入、导出	
+资格权管理：
+	数据对象：农户（户主）、农户成员、资格权关联表
+	功能：增删改查、导入、导出
+使用权人管理：
+	数据对象：使用权人（个人、企业、事业单位、国家机关、农村集体经济组织、其他等类型的代表）
+	功能：增删改查、导入、导出
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="一张图"><a href="#一张图" class="header-anchor">#</a> 一张图</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>描述：核心基础，宅基地宗地、农民房屋数据，集合<span class="token number">2</span>d、<span class="token number">3</span>d的地图形式展示
+图层结构：天地图地图（矢量、影像）<span class="token operator">+</span> 天地图标记（矢量、影像）<span class="token operator">+</span> 实际图层（县乡镇村的区域图 <span class="token operator">+</span> 地类图斑 <span class="token operator">+</span> 宗地自然幢）
+
+根据行政区划筛选（省、市、县<span class="token operator">/</span>区、村、组）来定位地图
+不同地区有不同需求，实现结果就是地图型的大屏报表
+
+最基本的一张图
+	宅基地一张图：查看宅基地宗地数据，同时定位地图显示宅基地
+不同组合（只要数据有关联都可定位）
+	建房需求一张图
+	建房申请一张图：地图<span class="token operator">+</span>建房申请的统计信息
+	使用权流转一张图
+	使用权退出一张图
+	有偿使用一张图
+	盘活利用一张图
+	等等
+
+扩展业务一张图
+	三色预警一张图：基于建房审批流程信息，
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="联合审批"><a href="#联合审批" class="header-anchor">#</a> 联合审批</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>描述：负责平台中所有的审批业务
+
+业务菜单
+    业务预审（直接以业务流程命名菜单，通过菜单权限按需分配）
+        建房申请：地区需求所致，先填表单数据，审核通过后再发起流程
+        使用权流转
+        退出抵押
+    个人审批
+        发起申请：当前用户可发起的流程
+        我的待办：当前用户的待办任务
+        我的已办：当前用户办理过的任务历史
+        我的发起：当前用户发起的流程实例
+
+业务预审的权限是正常控制，简单状态判断。
+个人审批的权限是基于工作流引擎实现，在一体化控制中心平台提前配置好业务流程，分配给用户
+
+其中流程的业务表单页面，大致内容如下：
+	流程通用外框：显示通用按钮，比如流程图、任务历史、同意<span class="token operator">/</span>驳回等等
+	流程内置表单：即实际的业务表单，根据流程配置动态路由加载
+	流程节点附件：右滑半窗口，管理当前节点的附件
+	流程节点报表：右滑全窗口，管理当前节点的报表，报表页面是宅基地报表系统构建的独立页面
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>宅基地的业务流程如下</p> <div class="language-go line-numbers-mode"><pre class="language-go"><code>宅基地建房申请流程（分不同地区的流程，大致如下）
+    村民理事会受理：填报申请表，附件资料
+    村组织审查：负责人签字盖章，附件资料
+    乡镇申请受理：审核
+    勘查：监管APP，四到场<span class="token operator">-</span>申请审查（填报、签到、上传附件）
+	并行流程：农业农村、自然资源、其他部门（自由扩展），相关审批负责人签字盖章
+    乡镇申请审批：生成批准书、生成公示牌（二维码），附件资料
+    放线：监管APP，四到场<span class="token operator">-</span>丈量批放（填报、签到、上传附件）
+    巡查：监管APP，四到场<span class="token operator">-</span>建房巡查（填报、签到、上传附件）
+    乡镇验收受理：审核，监管APP，四到场<span class="token operator">-</span>竣工核查（填报、签到、上传附件）
+	并行流程：农业农村、自然资源验收，其他部门（自由扩展），相关验收负责人签字盖章
+    乡镇验收审批：负责人签章，附件资料，数据备案（异步）存查
+
+宅基地使用权流转流程
+    （农户申请）：填报申请表，附件资料
+    村组审核
+    乡镇审批
+    合同网签
+    数据备案
+    权属变更
+
+宅基地使用权抵押流程
+    农户申请
+    村组审核
+    乡镇受理
+    现场探勘
+    乡镇审批
+    资料公示
+    签订协议
+    乡镇验收
+    分支流程：
+        签订承诺书，数据备案：（有偿退出、整体退出）
+        补偿登记，数据备案：（有偿退出、部分退出）
+        数据备案：（无偿退出）
+
+宅基地使用权抵押流程
+宅基地利用、农房利用流程
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><h3 id="数据分析"><a href="#数据分析" class="header-anchor">#</a> 数据分析</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>描述：即各业务的统计分析图表
+
+大致围绕以下业务统计，根据实际地区需求来
+    宅基地资格权
+    宅基地使用权
+    宅基地所有权
+	农户、户内成员、集体经济组织成员
+	宅基地、农民房屋
+	宅基地流转
+	宅基地抵押
+	宅基地有偿使用
+	宅基地有偿退出
+	盘活利用（闲置宅基地、闲置农民房屋、农房利用）
+	宅基地相关指标对比
+	综合监管（建房监管、执法监管、信访管理）
+	盘活利用
+	宅基地现状
+	
+大致统计维度
+	按行政区划、按年份、按月份
+	按各业务类型、方式等
+	对比历年趋势
+	对比整年月份趋势
+	对比各地区
+	对比增、减
+
+数据来源
+	<span class="token number">1</span>、根据表关系实时统计
+	<span class="token number">2</span>、定期任务调度统计结果，按月按年存进数据库统计表，再单表查询
+	<span class="token number">3</span>、会结合ES接口实现
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h3 id="执法监管"><a href="#执法监管" class="header-anchor">#</a> 执法监管</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>描述：负责宅基地的巡查、执法、更改的流程
+
+一般是app端应用，集合上面的业务流程比如建房申请
+因为需求关系，没有应用工作流引擎，对业务数据的状态更新和信息补充实现流程
+
+业务菜单：
+	巡查上报
+	执法派发
+	执法取证
+    执法审核
+    整改措施
+    整改验收
+    归档统计
+业务流程：
+	大致流程：巡查举报=&gt;执法派发=&gt;执法取证=&gt;执法审核=&gt;整改措施=&gt;整改验收=&gt;归档
+	1. 录入数据（标题、违法情况、违法地址、经纬度、巡查人员、巡查时间）
+	2. 将违法数据，派发给执法人员，
+	3. 执法人员，将取证数据录入
+	4. 审核，执法数据和取证数据，通过
+	5. 录入对应整改措施数据
+	6. 对整改结果，验收归档
+	7. 归档查询
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="档案管理"><a href="#档案管理" class="header-anchor">#</a> 档案管理</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>描述：汇总业务中的文件材料，作为档案管理
+
+业务菜单<span class="token punctuation">:</span>
+	首页检索
+	档案分类（直接以业务需求命名菜单，通过菜单权限按需分配）
+        建房申请档案
+        农户档案
+		使用权流转档案
+		有偿使用档案
+		自愿退出档案
+	档案销毁
+	档案借阅
+
+功能介绍
+    各业务页面有对应的生成档案按钮；
+    档案分类这的菜单是统一入口，都有生成档案按钮；
+    生成档案操作，就是将该业务中的所有文件汇总出来；
+	每份档案的文件，可自定义分类、再补充添加、删除（不影响原业务的文件）、打包下载；
+	档案销毁后，可恢复（即逻辑删除）
+	档案可借阅，需申请、审批后才有权查看，到期自动归还
+	档案的所有操作都有日志记录（添加文件、删除文件、新加分类、删除分类、申请借阅、通过借阅申请、驳回借阅申请、销毁、恢复）
+
+
+数据库表设计，都是通过fileId关联，file表统一维护文件信息，哈希值确定唯一文件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h3 id="其他模块"><a href="#其他模块" class="header-anchor">#</a> 其他模块</h3> <blockquote><p>非主要应用，需要多个项目集成。需求上不是很细化，待推进</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>通用功能：独立的增删改查，比如政策法规、新闻推荐、需求反馈、建房图集
+遥感监测：需要结合IOt物联网设备，主要功能有 影像对比、轨迹追踪、追踪定位、卷帘对比、 遥感识别
+用地指标：基于省-市-县分配的数据指标，于实际的宅基地数据、农房数据，建房前后的对比
+数据汇交：基于县-市-省，低级地区的数据汇交至高级地区。（浙江版数据汇级平台的应用）
+共享农房：农民房屋的出租、求租等等盘活利用信息，类似中介平台。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="功能配置"><a href="#功能配置" class="header-anchor">#</a> 功能配置</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>描述：将以上业务模块功能拆分解耦，前端Vue组件化，交给业务人员自由配置，开放性设计
+
+系统配置：
+	页面布局风格：支持<span class="token number">2</span>种风格，顶部菜单、模块化菜单
+	首页模板配置：模块化组件，自由配置首页的展示内容，比如待办任务组件、某统计组件
+	移动端配置：网申小程序和监管APP的版本比较通用，需要设置相关服务地址
+
+流程配置：（联合审批）
+    节点表单附件配置：根据流程节点配置需要上传的附件资料
+    节点表单打印配置：根据流程节点配置需要打印的表单
+	待办任务超时配置：根据流程节点设置待办超时，自动审批（定时任务处理）
+
+业务配置：
+	机构配置：根据行政区划，配置机构信息
+	证书配置：根据行政区划，配置证书信息，比如建房申请流程中的批准书、公示牌
+	预警配置：各业务列表页面，超过某值，高亮显示
+	盖章配置：绑定不同角色的盖章，用于流程审批中的盖章，以及最终电子签章的合成
+
+地图配置：
+	图层配置：根据行政区划，设置各地区的图层数据，比如基础的影像和矢量底图
+	大屏配置：根据需求设置需要的统计组件
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="基本信息"><a href="#基本信息" class="header-anchor">#</a> 基本信息</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>用户管理：关联角色、组织
+角色管理：关联用户
+组织管理：关联角色、行政区划
+行政区划管理：
+日志管理：登录日志、操作日志、异常日志
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="项目功能设计"><a href="#项目功能设计" class="header-anchor">#</a> 项目功能设计</h2> <p>大部分功能都以<strong>开放式设计</strong>来新增功能，最终由技术支持人员自由配置来满足多个地区版本不同的需求</p> <h3 id="签名盖章"><a href="#签名盖章" class="header-anchor">#</a> 签名盖章</h3> <ul><li>盖章配置：签章图片、签名图片，关联地区、个人角色</li> <li>自动盖章：调取签章配置信息，一键盖章</li> <li>电子签名：
+<ul><li>可调取签名配置信息，一键签名</li> <li>可由前端插件（canvas绘画实现，支持硬件手写板），在线签名，生成图片完成签名</li></ul></li> <li>电子签章：
+<ul><li>完成自动盖章后，后台生成PDF文件</li> <li>某流程节点触发定时任务，后台调用第三方接口，合成有法律效应的PDF签章文件，支持在线验签</li> <li>点聚电子签章系统（北京点聚信息技术有限公司），通过CAS认证的数字签章</li></ul></li></ul> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223145651381.png" alt="image-20220223145651381"></p> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223145922133.png" alt="image-20220223145922133"></p> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223150038176.png" alt="image-20220223150038176"></p> <h3 id="证书生成"><a href="#证书生成" class="header-anchor">#</a> 证书生成</h3> <ul><li>证书规则先通过证书配置菜单也配置，类似上述签章配置。</li> <li>这里主要定义生成规则，比如批准书号，编码位数+乡号+发证机构</li> <li>业务流程中用到，只需一键生成</li> <li>机构管理，配置机构信息</li></ul> <h3 id="路由菜单"><a href="#路由菜单" class="header-anchor">#</a> 路由菜单</h3> <ul><li>平台菜单，由前端开发后配置可访问的页面路由</li> <li>管理员授权角色可访问的路由菜单，动态渲染</li></ul> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223151035075.png" alt="image-20220223151035075"></p> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223151259434.png" alt="image-20220223151259434"></p> <h3 id="表单配置"><a href="#表单配置" class="header-anchor">#</a> 表单配置</h3> <p>低代码设计，自定义业务表单，数据存储后端数据库，调取后前端动态渲染。减少开发工作，适用大部分业务。</p> <ul><li>业务表单：网页端、手机端的简单表单设计</li> <li>业务对象：表单实体对象设计，后台数据库生成表，实现增删改查</li> <li>自定义对话框：窗口数据，主要是查询、选择功能</li></ul> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223150640058.png" alt="image-20220223150640058"></p> <h3 id="流程配置"><a href="#流程配置" class="header-anchor">#</a> 流程配置</h3> <p>基于Activiti工作流引擎实现，完全独立，与业务项目解耦，可由非开发人员自主配置</p> <ul><li>流程配置主要步骤：
+<ul><li>流程图配置</li> <li>流程节点表单配置：
+<ul><li>选择系统表单：基于上面配置好表单数据</li> <li>选择路由表单：特殊定制，只需配置VUE路由菜单相对地址，表单页面数据在前端项目中</li></ul></li> <li>流程节点候选人配置：支持个人、角色、组织</li> <li>流程节点操作配置：比如同意、驳回、转办、抄送等按钮功能，部分基于自定义对话框</li> <li>插件配置：比如消息通知、节点跳转规则等等</li> <li>流程授权：授权后，个人或某业务模块即可看到数据，即发起、待办、已办、历史等类似菜单</li></ul></li></ul> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223150528282.png" alt="image-20220223150528282"></p> <h3 id="附件上传"><a href="#附件上传" class="header-anchor">#</a> 附件上传</h3> <p>流程插件，依赖于流程定义，需要先配置好业务流程图</p> <ul><li><p>根据流程节点信息，可设置各节点需要上传的附件数据</p></li> <li><p>支持多级分类、数量限制、是否必传</p></li> <li><p>配置信息与业务流程定义关联，附件数据与业务流程实例关联</p></li> <li><p>使用时，各节点调取附件上传配置信息，需要按要求上传，才通过当前节点验证走到下个节点</p></li></ul> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223145438983.png" alt="image-20220223145438983"></p> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223145406369.png" alt="image-20220223145406369"></p> <h3 id="表单打印"><a href="#表单打印" class="header-anchor">#</a> 表单打印</h3> <p>流程插件，依赖于流程定义，需要先配置好业务流程图</p> <ul><li>基于ureport依赖包搭建的独立服务，根据业务需求定制表单</li> <li>打印配置：自由配置业务流程节点所需显示的报表</li> <li>业务呈现：调取报表配置，单独加载报表页面</li></ul> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20220223150144270.png" alt="image-20220223150144270"></p> <ul><li></li></ul> <h3 id="地图配置"><a href="#地图配置" class="header-anchor">#</a> 地图配置</h3> <ul><li>图层设置：影像注记、矢量底图等底图图层信息，控制是否默认加载</li> <li>工具设置：工具是否显示，比如放大、缩小、定位等等</li></ul> <h3 id="系统配置"><a href="#系统配置" class="header-anchor">#</a> 系统配置</h3> <ul><li>系统属性设置：自定义系统全局参数，后台数据库存储，避免数据写死
+<ul><li>通用移动端app，初始化加载读取服务配置地址</li></ul></li> <li>数据分类设置：根据递归树分类定义，业务中需要分类只需添加关联字段，按分类过滤</li> <li>数据字典设置：</li> <li>数据库源设置：多租户版本功能，根据租户信息，业务数据动态加载业务库</li> <li>任务调度配置：嵌入xxl-job-admin管理平台页面</li> <li>字体图标设置：页面风格简单自定义功能</li></ul> <h3 id="其他可配置化"><a href="#其他可配置化" class="header-anchor">#</a> 其他可配置化</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>数据传参加密，比如登录密码
+	非对称加密，前端公钥加密，后端私钥解密
+
+登录认证
+	可选jwt认证
+	可选加参，验证码
+	第三方单点登录：
+		浙江省级版本（数字三农、浙里办、浙政钉（钉钉的专有版本））
+
+消息通知：
+	默认邮箱
+	可选短信
+	可选钉钉
+
+消息队列：
+	默认同步，不用队列
+	可选redis队列
+	可选MQ队列，默认集成ActiveMQ，可替换其他MQ依赖
+
+文件存储：
+	默认本地、数据库（初始化配置文件）
+	可选MinIO
+	可选阿里云OSS
+	可扩展其他方式，基于策略设计模式
+
+第三方接入
+	浙政钉（钉钉的专有版本）：面向政务部门，比如农业农村局等
+	浙里办：接入浙江的农户数据，app小程序的开发
+	开发模块H5应用，嵌入以上两APP中使用，比如联合审批、四到场监管等。（类似开发微信的小程序）
+
+全息VR影像
+	通过线下拍摄搜集的数据，第三方平台外链查看
+	后期通过项目的文件系统存储数据
+
+全文搜索
+	基于ES引擎存储业务数据，提供全文搜索功能
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h2 id="项目版本"><a href="#项目版本" class="header-anchor">#</a> 项目版本</h2> <blockquote><p>先在公司云服务器部署试用同时作为测试服务，正式签约后部署政府政务网</p></blockquote> <h3 id="迭代版本"><a href="#迭代版本" class="header-anchor">#</a> 迭代版本</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code>基础版v1<span class="token operator">-</span>v2：<span class="token number">2019.12</span><span class="token operator">-</span><span class="token number">2020.1</span>
+   用户组织管理平台，用的开源若依项目
+   流程引擎，用原生activiti与业务集成版
+稳定版v3：<span class="token number">2020.6</span><span class="token operator">-</span><span class="token number">2020.7</span>
+   一体化权限平台：开源AgileBpm前后端重构
+   宅基地管理平台：联合审批功能稳定
+稳定版v3迭代：<span class="token number">2020.6</span><span class="token operator">-</span>至今，<span class="token number">60</span><span class="token operator">+</span>地区版本
+   宅基地管理平台，随地区需求功能扩展
+   部署了开发版本、演示版本（测试）
+基准版v4：<span class="token number">2022.1</span><span class="token operator">-</span>至今
+多租户版
+   一体化权限平台：支持租户配置，支持业务数据库源配置
+   宅基地管理平台，根据租户动态路由数据库
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="地区应用"><a href="#地区应用" class="header-anchor">#</a> 地区应用</h3> <p>国家开放104个试点县（不包括市级），其中项目应用在以下地区</p> <div class="language-go line-numbers-mode"><pre class="language-go"><code>基础试点版
+			江西鹰潭市余江区
+扩展定制版		
+			江西鹰潭市余江区（已正式部署政务网）
+            江西<span class="token operator">-</span>鹰潭市<span class="token operator">-</span>贵溪县
+            江西<span class="token operator">-</span>九江市<span class="token operator">-</span>湖口县
+			浙江<span class="token operator">-</span>省级（数据汇交平台，县市向上汇交）
+			浙江<span class="token operator">-</span>温州市<span class="token operator">-</span>龙港市
+			浙江<span class="token operator">-</span>湖州市<span class="token operator">-</span>德清县（已正式部署政务网）
+			浙江<span class="token operator">-</span>湖州市<span class="token operator">-</span>德清县<span class="token operator">-</span>莫干山
+            江苏<span class="token operator">-</span>淮安市<span class="token operator">-</span>盱眙县
+            江苏<span class="token operator">-</span>宿迁市<span class="token operator">-</span>泗阳县
+            江苏<span class="token operator">-</span>苏州市<span class="token operator">-</span>昆山市（已正式部署政务网）
+            江苏<span class="token operator">-</span>常州市
+            江苏<span class="token operator">-</span>常州市<span class="token operator">-</span>武进区（已正式部署政务网）
+            江苏<span class="token operator">-</span>常州<span class="token operator">-</span>溧阳县
+            湖南<span class="token operator">-</span>永州市<span class="token operator">-</span>宁远县
+            湖南<span class="token operator">-</span>株洲市<span class="token operator">-</span>醴陵区（失联）
+            湖北<span class="token operator">-</span>荆门市<span class="token operator">-</span>沙洋县
+            湖北<span class="token operator">-</span>恩施市
+			湖北<span class="token operator">-</span>黄石市<span class="token operator">-</span>大冶县（失联）
+            河南<span class="token operator">-</span>洛阳市<span class="token operator">-</span>孟津区
+            河南<span class="token operator">-</span>平顶山市<span class="token operator">-</span>宝丰县
+            黑龙江<span class="token operator">-</span>绥化市<span class="token operator">-</span>兰西县（失联）
+            黑龙江<span class="token operator">-</span>大庆市<span class="token operator">-</span>杜尔伯特自治县（失联）
+            河北<span class="token operator">-</span>邯郸市<span class="token operator">-</span>邱县
+            河北<span class="token operator">-</span>邯郸市<span class="token operator">-</span>峰峰矿区
+            海南省<span class="token operator">-</span>文昌市
+            海南<span class="token operator">-</span>三亚市<span class="token operator">-</span>天涯区
+            海南省<span class="token operator">-</span>海口市<span class="token operator">-</span>琼山区
+            广西<span class="token operator">-</span>柳州市<span class="token operator">-</span>鹿寨县
+            福建<span class="token operator">-</span>三明市<span class="token operator">-</span>泰宁县
+            福建<span class="token operator">-</span>三明市
+            福建<span class="token operator">-</span>泉州市<span class="token operator">-</span>晋江县
+            重庆<span class="token operator">-</span>大足区（已正式部署政务网）
+            安徽<span class="token operator">-</span>省级（招标失败）
+            安徽<span class="token operator">-</span>滁州市<span class="token operator">-</span>凤阳县
+            安徽<span class="token operator">-</span>池州市<span class="token operator">-</span>东至县
+            安徽<span class="token operator">-</span>滁州市
+			四川<span class="token operator">-</span>资阳市（招标失败）
+			四川<span class="token operator">-</span>资阳市<span class="token operator">-</span>雁江区
+			四川<span class="token operator">-</span>成都市<span class="token operator">-</span>郫都区（失联）
+			四川<span class="token operator">-</span>眉山市<span class="token operator">-</span>彭山区
+			四川<span class="token operator">-</span>宜宾市<span class="token operator">-</span>翠屏区
+			山西<span class="token operator">-</span>晋城市<span class="token operator">-</span>泽州县
+            陕西<span class="token operator">-</span>榆林市<span class="token operator">-</span>神木市
+            陕西<span class="token operator">-</span>西安市<span class="token operator">-</span>高陵区
+            山东<span class="token operator">-</span>青岛市<span class="token operator">-</span>平度县
+            山东<span class="token operator">-</span>临沂市<span class="token operator">-</span>兰陵区
+            山东<span class="token operator">-</span>潍坊市<span class="token operator">-</span>寒亭区
+            内蒙古<span class="token operator">-</span>巴彦淖尔<span class="token operator">-</span>五原县（失联）
+            内蒙古<span class="token operator">-</span>通辽<span class="token operator">-</span>开鲁县（失联）
+            辽宁<span class="token operator">-</span>沈阳市<span class="token operator">-</span>沈北新区
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br></div></div><h2 id="项目架构"><a href="#项目架构" class="header-anchor">#</a> 项目架构</h2> <h3 id="后端结构"><a href="#后端结构" class="header-anchor">#</a> 后端结构</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>第一版：一个springcloud项目
+fwcloud-master：微服务项目
+	fwcloud-eureka
+	fwcloud-generator
+	fwcloud-activiti5
+		fwcloud-activiti5-api
+	fwcloud-authority ——&gt; agilebpm
+	fwcloud-gateway
+	fwcloud-common
+	fwcloud-provider： 业务服务
+		fwcloud-provider-homestead
+		fwcloud-provider-homestead-v2
+		fwcloud-provider-homestead-supervision 违法查处
+		fwcloud-provider-map 地图
+		...分支中还有厕改、银农项目、合作社项目、数字果园等等
+
+第三版：拆分springboot项目	当前应用版本
+homestead: 宅基地业务服务
+homestead-report(fwreport)：宅基地报表服务
+homestead-bpm：宅基地基础服务
+    flowbpm
+        auth  认证模块
+        base  基础模块
+        org   组织模块
+        sys   系统模块
+    flowbpm-wf 流程核心模块，代码加混淆
+homestaed-job：宅基地定时调度服务
+homestaed-search：宅基地搜索服务
+homestaed-file：宅基地文件服务
+homestead-blockchain（blockchain）：宅基地区块链服务
+
+第四版：springcloud
+sc-master
+	sc-gateway
+	sc-eureka
+	sc-actuator
+	sc-auth
+	sc-common
+        sc-common-auth：spring security oauth2相关的认证授权鉴权
+        sc-common-base: 基础包，包含工具类
+        sc-common-db：数据库相关
+        sc-common-web：MVC相关
+        sc-common-ribbon：ribbon、feign相关
+hs-master
+	hs-bpm
+	hs-common
+		hs-feign-api：服务接口
+		hs-tenant-db：租户依赖
+	hs-zjd
+	hs-map
+	... 按业务拆分
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br></div></div><h3 id="前端结构"><a href="#前端结构" class="header-anchor">#</a> 前端结构</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>homestead-auth(Authority)：一体化控制中心平台
+homestead-ui：农村宅基地信息管理平台
+homestead-supervision：遥感影像模块，内嵌至宅基地平台中
+bpm-ui：流程设计器
+homestead-blockchain-ui(blockchain-ui): 宅基地区块链平台
+其他应用
+	homestead-ui-app：网申端H5应用（微信小程序）
+	安卓App：宅基地监管助手
+	PC应用：宅基地库管软件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="应用服务"><a href="#应用服务" class="header-anchor">#</a> 应用服务</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>数据库
+	mysql（homestead-bpm）
+	postgresql（homestead）
+缓存
+	redis
+消息处理
+	同步
+	redis
+	activemq（可随时切换其他，比如rabbitmq）
+搜索服务
+	elasticsearch
+	kibana（前期使用elasticsearch-head）
+	logstash
+可持续构建
+	jenkins
+	内网穿透frp
+文件存储
+	服务器本地存储
+	minio、阿里云等s3协议的oss服务
+	数据库存储二进制
+报表服务
+	RDP（单独项目），不适合
+	Ureport（依赖包）
+OpenGIS Web服务
+	gerserver
+私有仓库
+	nexus3：包括docker、maven、npm等等
+服务部署
+	后端：docker+jar包
+	前端：docker+nginx
+容器管理：
+	服务器应用大部分以docker部署，需要docker编排的管理：
+		docker-compose脚本方式
+		kuboard（k8s），不适合
+		portainer
+项目管理
+	代码仓库：github
+	需求管理：coding
+	项目文档：目前使用nginx部署静态项目，markdown转html
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><p>一般地区版本部署，所需如下</p> <div class="language-go line-numbers-mode"><pre class="language-go"><code><span class="token number">1.</span> 提供linux操作系统环境，内网环境的话，以下软件用本地包安装
+<span class="token number">2.</span> 安装docker服务
+<span class="token number">3.</span> 以docker安装mysql，或系统安装
+<span class="token number">4.</span> 以docker安装postgesql，或系统安装
+<span class="token number">5.</span> 以docker安装geoserver
+<span class="token number">6.</span> 以docker安装redis
+<span class="token number">7.</span> 以docker<span class="token operator">-</span>compose编排部署宅基地相关服务
+        bpm<span class="token operator">-</span>api
+        bpm<span class="token operator">-</span>ui
+        hs<span class="token operator">-</span>api
+        hs<span class="token operator">-</span>ui
+        hs<span class="token operator">-</span>report
+        hs<span class="token operator">-</span>supervision<span class="token operator">-</span>api （可选）
+        hs<span class="token operator">-</span>supervision<span class="token operator">-</span>ui（可选）
+        hs<span class="token operator">-</span>job（可选）
+<span class="token number">8.</span> 可选应用
+	消息中间件（activemq、rabbitmq）
+	搜索服务（elk）
+	文件存储（oss）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="数据库设计"><a href="#数据库设计" class="header-anchor">#</a> 数据库设计</h2> <p>数据库主要分2个库，各业务微服务共用一个库，各基础服务共用一个库</p> <h3 id="业务服务"><a href="#业务服务" class="header-anchor">#</a> 业务服务</h3> <p>根据《农村宅基地数据库规范》建表，24张非空间表和6张空间表</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>对象结构表：
+	所有权人属性结构描述表：农村集体经济组织、村民委员会或村民小组
+	农户属性结构描述表：与所有权人关联（所有权人代码）
+	农户户内成员属性结构描述表
+	使用权人属性结构描述表	
+	宅基地宗地信息属性结构描述表	
+	农民房屋属性结构描述表
+	
+宅基地建房审批：
+	用地建房申请属性结构描述表
+	申请人家庭成员属性结构描述表
+	用地建房审批属性结构描述表
+	其他部门审查意见属性结构描述表
+	乡村建设规划许可证属性结构描述表
+	农村宅基地批准书属性结构描述表
+	用地建房验收属性结构描述表
+	
+宅基地经营流转盘活利用（暂时这么归纳）：	
+	宅基地使用权流转属性结构描述表
+	宅基地使用权抵押属性结构描述表
+	宅基地自愿有偿退出属性结构描述表
+	宅基地有偿使用属性结构描述表
+	宅基地监管属性结构描述表
+	宅基地利用结构描述表
+	农民房屋利用情况结构描述表
+	
+宅基地台账信息	
+	区域台账属性结构描述表
+	农户台账属性结构描述表
+其他：	
+	附件表
+	数据字典表
+	
+空间表：
+	区域表：分乡/镇、村、组
+	区域界线表
+	宅基地宗地表
+	自然幢表
+	界址线表
+	界址点表
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p>根据业务需求和系统扩展，新增自定义表</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>业务功能表：
+	宅基地四到场表
+	证书规则配置表
+
+系统功能表：
+    行政区划表：区分空间表的区域表，值相同，按国家规定的地区编码使用
+    系统附件表：区分规范的附件表，记录文件的详细信息
+    数据字典表：自定义表，数据和规范中的数据一起用
+
+流程扩展表：
+    流程实例同步表：记录流程西悉（工作流程引擎和用户组织相关表在另个数据库）
+    流程附件配置表
+    流程报表配置表
+
+系统配置表：
+	首页配置表
+	图层配置表
+	移动端配置表：网申系统（微信小程序）和四到场App（安卓）的不同地区版本数据配置
+	业务号规则表：适用规则数据库中的XX代码（即主键），按规范的要求生成或自定义规则生成
+	通用配置表：比如前端的交互，某台账列表的某属性超过多少以警告状态显示
+
+档案管理表
+	档案记录表：根据具体业务建立档案	
+	档案详情表：即材料文件信息
+	档案日志表：材料上传、材料删除、档案借阅、档案归还、档案销毁、档案恢复
+	档案申请表：
+	档案借阅表：
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h3 id="基础服务"><a href="#基础服务" class="header-anchor">#</a> 基础服务</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>工作流：
+	引擎生成的21张表
+	agile扩展的7张表：
+		流程定义
+		流程实例
+		流程任务
+		流程任务候选人
+		流程任务意见
+		流程执行堆栈：存储节点执行的线路，记录比如A-&gt;B,B-&gt;C
+		业务日志：存储每部执行提交的业务数据
+		流程插件：
+			抄送触发数据表
+			抄送接收表
+			催办触发数据表
+			催办日志表
+	agile扩展的表单表：没有用（因为是easyUI的前后端一体化项目），流程改为用前端的Vue组件化表单，不存表单样式
+	
+用户组织：
+	用户表
+	角色表
+	组织表
+	用户、角色、组织关联表
+	第三方用户绑定表
+	
+系统工具：
+	子系统表
+	子系统菜单表
+	子系统菜单、角色关联表
+	数据源表
+	数据源模板表
+	数据库配置表
+	数据字典表
+	系统附件表
+	系统日志表	
+	系统脚本表：groovy脚本，适用流程和其他场景
+	属性配置表：存储配置文件数据，比如application.yml，实现配置中心的功能
+	分类树表
+	分类树节点表
+	定时任务表
+	定时任务日志表
+
+多租户：
+	租户表
+	租户、用户关联表
+	租户子系统、数据库源关联表
+	个性化配置表
+	租户子系统、个性化配置关联表
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br></div></div><h2 id="技术架构"><a href="#技术架构" class="header-anchor">#</a> 技术架构</h2> <h3 id="后端技术栈"><a href="#后端技术栈" class="header-anchor">#</a> 后端技术栈</h3> <ul><li>微服务分布式版本：Spring Boot 2.X + Spring Cloud + Spring Cloud Netflix系列组件</li> <li>服务治理注册发现：Spring Cloud Netflix Eureka</li> <li>统一网关路由：Spring Cloud Gateway</li> <li>声明式服务调用：Spring Cloud OpenFeign</li> <li>服务降级熔断：Spring Cloud Netflix Hystrix</li> <li>服务负责均衡：Spring Cloud Netflix Ribbon</li> <li>服务安全认证：Spring Security + Oauth2 + JWT</li> <li>数据库访问层：Mybatis、Mybatis-Plus</li> <li>服务应用监控：Spring Cloud Admin</li> <li>统一日志存储：ELK</li> <li>消息中间件：MQ（Active、Rabbit）</li> <li>分布式任务调度：XXL-Job</li> <li>搜索引擎：Elasticsearch</li> <li>数据库：PostgreSQL、MySQL</li> <li>缓存：Redis</li> <li>OSS文件对象存储服务：MinIO、阿里云</li> <li>服务部署：Jenkins + Docker + Portainer</li> <li>流程引擎：Activiti 二次开发 + ProGuard混淆</li> <li>报表引擎：UReport 或 RDP</li> <li>GIS Web服务：GeoServer</li></ul> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/1616642967366.png" alt=""></p> <h3 id="前端技术栈"><a href="#前端技术栈" class="header-anchor">#</a> 前端技术栈</h3> <ul><li>Vue框架（D2admin基础版）+  Webpack</li> <li>Node本地 和 Nginx服务器，部署静态项目，代理转发后端服务</li></ul> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/1616651985764.png" alt=""></p> <h3 id="政务网访问"><a href="#政务网访问" class="header-anchor">#</a> 政务网访问</h3> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/image-20211130140715444.png" alt="image-20211130140715444"></p> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/1616640199541.png" alt=""></p> <h3 id="服务监控"><a href="#服务监控" class="header-anchor">#</a> 服务监控</h3> <p><img src="https://tva1.sinaimg.cn/large/0082zybply1gbqmr6a3syj30qq0n6q56.jpg" alt="img"></p> <h3 id="服务器配置"><a href="#服务器配置" class="header-anchor">#</a> 服务器配置</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>公司云服务器大致配置
+	
+云服务器
+	天翼云、阿里云
+	
+大致配置参考，个别参数与应用场景有关
+    Linux
+        CentOS 7.7，64位
+        8核、内存(32、64)
+        SSD数据盘（500G起）系统盘60GB
+        带宽10M起
+    Windows
+        Windows Server 2016 数据中心版，64位
+        4、8核、内存(16、32)
+        SSD数据盘（500G起）系统盘60GB
+        带宽10M起 
+    
+研发部门基本资源
+	1台Windows（8核32）阿里云
+		P4：项目版本仓库
+		JIRA：项目管理系统
+		比较久了，数据很杂，老项目使用（.net）
+	1台Linux（8核64G）天翼云101
+        Gitlab：项目版本仓库
+        Nenuxs：仓库，存放docker镜像、后端maven、前端npm
+        MinIO：对象存储，仅公司公共资源
+        OwnCloud：文档系统，管理公司资料文档
+        jenkins：自动化构建
+        数据库：mysql、redis、mongodb
+		项目管理系统：coding（官网服务）
+	1台Linux（8核64G）天翼云、1台Windows（8核32G）
+		各项目用于开发、测试
+		没有权限控制
+		
+宅基地项目
+	Linux都是统一用docker-compose编排部署
+    1台，用于地区演示、测试（主要数量较多，单独一台服务器）
+    Linux（8核64G）218
+        基本服务：mysql、redis、activemq、elk
+        项目服务：一个地区所有容器服务，共分配4G-6G内存，地区演示结束容器会删除，数据保留
+    Windows（8核32G）119
+        数据库：postgresql
+        地图服务：geoserver
+        宅基地调查系统：pc客户端
+	
+    1台，用于重要地区，定制或半正式（正式落地则迁移在地区自己申请的云服务器，数据是真实数据）
+    Linux（8核64G）120
+        基本服务：mysql、redis、activemq、elk
+        项目服务：一个地区所有容器服务，共分配8G起内存，数据保留
+    Windows（8核32G）120
+        数据库：postgresql
+        地图服务：geoserver
+        宅基地调查系统：pc客户端
+   
+   正式部署例子
+   		江苏省常州市武进区
+   		1台，Windows Server 2012 R2 Datacenter 64位 中文版，4核/16G/100G/1500G硬盘，带宽10M
+   		1台，CentOS7.1 64位，4核/16G/100G/1500G硬盘，带宽10M
+
+银农直连项目
+	1台，Windows（32G）
+	
+家庭农场项目
+	1台，Linux（8核32G）
+
+其他
+	7台服务器用于其他部门
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br></div></div><h3 id="自动化构建"><a href="#自动化构建" class="header-anchor">#</a> 自动化构建</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>1. 更新代码，提交gitlab
+2. 配置Jenknis
+3、运行Jenkins任务
+	1、自动运行（项目配置Jeknis钩子，push等事件触发Jenkins构建）
+	2、手动运行
+4、部署服务器脚本内容（构建项目镜像、停止原容器，删除原容器、启动新容器）
+
+jenkins的配置
+	1、选择在jenkins服务器构建打包
+	2、推送到指定远程服务器，再构建docker镜像
+	3、运行脚本（Linux、docker-compose相关命令）
+
+定期将稳定版本的docker镜像上传Nexus
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="相关文档"><a href="#相关文档" class="header-anchor">#</a> 相关文档</h2> <p>规范文档</p> <ul><li>数据库设计规范文档：要求如何设计数据库表</li> <li>后端开发规范文档：要求设计规范编码，基于阿里巴巴开发手册修改</li> <li>代码分支规范文档：要求如何Gitlab代码版本控制</li></ul> <p>宅基地项目文档</p> <ul><li>数据库设计说明书：介绍数据库表</li> <li>云服务器部署文档：适用于公司云服务器的项目部署，一系列自动化部署构建</li> <li>离线部署文档：适用于部署在政务网环境，需要整理好离线包和相关脚本</li></ul> <h2 id="问题处理"><a href="#问题处理" class="header-anchor">#</a> 问题处理</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>1. 项目重构，工作流引擎重写？
+	2020疫情有足够时间重构
+2. 各地区版本扩展，版本部署，服务器支持不住？
+	1、docker容器资源限制
+		一个地区版本部署，差不多需要10个容器服务
+		一个64g服务器容器差不多220个
+	2、jvm优化控制
+	3、服务拆分，通用服务通用
+	4、多租户设计，地区服务通用
+	5、服务器升级（32-&gt;64）
+	6、服务器扩展（1台-&gt;3台)
+3. 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h2> <h3 id="一体化控制中心平台-2"><a href="#一体化控制中心平台-2" class="header-anchor">#</a> 一体化控制中心平台</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>			
+项目简介：统一管理用户角色权限的架构体系，方便接入其他项目业务的一体化管理平台
+项目模块：
+		1、系统设置：用户管理、角色管理、组织管理、行政区划管理、子系统管理、
+		2、流程设置：流程定义、流程实例、流程任务、表单管理、数据库源管理
+项目技术：
+		1、前后端分离的微服务架构
+		2、前端基于Vue框架开发
+		3、后端基于SringBoot2.X，Srping Cloud Hoxton，Spring Cloud Alibaba组件
+		4、基于Spring Security 实现基于RBAC、jwt和oauth2的统一权限认证
+		5、多租户模式支持多种数据库，项目应用MYSQL、POSTGRESQL，缓存数据库Redis
+		6、流程审批基于流程引擎Activiti定制化二次开发，支持Vue表单和原生表单
+		7、集成三种消息消费模式：同步、redis、消息中间件ActiveMQ
+		8、集成三种文件存储方式：相对目录、数据库存储、文件存储系统mino
+		9、分布式调度：XXL-JOB定时任务调度
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><div class="language-go line-numbers-mode"><pre class="language-go"><code>
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>公司经历
+厕改项目<span class="token punctuation">:</span> spring cloud<span class="token operator">+</span>vue<span class="token operator">+</span>mysql<span class="token operator">+</span>docker
+nginx：服务部署、反向代理
+mapstore<span class="token punctuation">:</span>研究mapstore项目，学习React相关知识
+geostore：webservice服务、http代理包
+geoserver：发布服务shape方式、数据库方式
+linux<span class="token punctuation">:</span>服务部署，项目部署、攻击处理、ssh连接问题、安装PostgreSQL、geoserver
+自然资源：Oracle数据库
+工作流：spring集成activiti、前端d2admin
+物联网：四情监控云平台，纯前端，sass、mockjs
+报表系统：RDP报表研究使用
+docker、docker<span class="token operator">-</span>compose方式部署项目
+宅基地：演示版、演示版v2、浙江版、湖南版、余江、宁远、醴陵、文昌、武进
+流程引擎：agilebpm，反编译源码二次开发
+产改<span class="token operator">-</span>银农直连：agilebpm的流程业务
+agilebpm：源码重构项目，作流程、权限管理系统，接入其他系统、定制业务流程
+jenkins持续化构建：远程服务SSH发布docker<span class="token operator">-</span>compose脚本、后端Maven、前端Node、角色权限管理
+nexus3<span class="token punctuation">:</span> 因微服务公告包、docker镜像库等需求，搭建仓库管理服务
+ureport：报表第三方包
+搭建测试：k8s、rabbitMQ、es、activiMQ、virtualBox、rocketMQ
+微服务搭建：spring cloud gateway、oauth2、webflux
+java混淆器：proGruard
+portainer：docker可视化管理平台
+
+团队要求：
+	<span class="token number">1</span>、开发规范：编码、项目结构、工具、框架、其他
+	<span class="token number">2</span>、开发文档
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>收获总结	
+<span class="token number">1.</span> 工作记录，包括每天、每周、每个项目的总结，避免遗忘
+<span class="token number">2.</span> 学习记录，博客笔记整理
+<span class="token number">3.</span> 
+<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>学习总结	
+其他：
+	负责Java面试
+	负责Linxu服务运维
+	负责技术方案解决
+
+<span class="token number">2019</span><span class="token operator">-</span><span class="token number">08</span>至~
+微服务基础搭建：
+	注册中心：Eureka
+	服务间通信：OpenFeign
+	服务熔断：Hystrix
+	统一网关：Spring Cloud Gateway
+	认证鉴权：Spring Cloud Oauth2 <span class="token operator">+</span> JWT
+	服务监控：Spring Boot Admin
+	
+<span class="token number">2019</span><span class="token operator">-</span><span class="token number">08</span>至~	
+公司开发环境调整
+	服务器扩展：原本以windows服务器为主，扩展多台Linux系统服务器，<span class="token number">64</span>G<span class="token operator">+</span><span class="token number">2</span>T
+	应用部署安装：采用Docker容器化方式，后期扩展尝试了Kuboard <span class="token keyword">for</span> K8S，最终选用docker<span class="token operator">-</span>compose插件 <span class="token operator">+</span> Portainer可视化管理平台
+	代码管理软件：由perform（p4）转移为Gitlab平台 <span class="token operator">+</span> 内网穿透，开放公网地址
+	仓库管理软件：搭建Nexus平台，用于Docker镜像库、Maven镜像库、Npm镜像库
+	可持续化构建软件：内网主机搭建Jenkins平台 <span class="token operator">+</span> 内网穿透，开放公网地址
+	私有云网盘：采用OwnCloud网盘，作为公司资料文档存储
+	项目协同软件：原有Jira <span class="token operator">+</span> 新的CODING
+	
+<span class="token number">2019</span><span class="token operator">-</span><span class="token number">6</span>至<span class="token number">2019</span><span class="token operator">-</span><span class="token number">07</span>
+农村厕改管理系统	
+	简介：管理农村公厕的维修改造，主要是申请登记、维修登记、进度跟踪
+	框架：springboot<span class="token operator">+</span>mybatis<span class="token operator">-</span>plus<span class="token operator">+</span>mysql<span class="token operator">+</span>vue<span class="token operator">+</span>geoserver
+	总结：学到了geoserver的应用
+
+	
+开源项目研究
+	简介：MapStore<span class="token operator">+</span>GeoStore，地图管理平台
+	框架：rectJS <span class="token operator">+</span> webservice <span class="token operator">+</span> LDAP <span class="token operator">+</span> jetty
+	总结：了解rectJS <span class="token operator">+</span> webservice <span class="token operator">+</span> LDAP <span class="token operator">+</span> jetty
+	时长：半个月
+	
+	简介：RDP报表系统
+	框架：springboot <span class="token operator">+</span> mysql
+	总结；熟悉使用
+	时长：<span class="token number">1</span>周
+	
+	简介：agilebpm
+	框架：springboot <span class="token operator">+</span> mysql <span class="token operator">+</span> activiti
+	总结；源码反编译，二次开发扩展流程功能
+	时长：半个月，后续根据需求扩展开发
+
+时长：<span class="token number">1</span>个月	
+四情监控云平台
+	简介：农业物联网监控设备的管理，通过调用远程监控设备展示视频内容
+	框架：vue<span class="token operator">+</span>mockJS<span class="token operator">+</span>数据对接
+	总结：学习回顾前端相关技术
+
+时长：<span class="token number">1</span>个月	
+产权制度改革综合管理平台（银农直连）
+	简介：银农直连模块，审批流程相关
+	框架：springboot<span class="token operator">+</span>mysql<span class="token operator">+</span>activiti<span class="token operator">+</span>security<span class="token operator">+</span>第三方银行对接
+	总结：流程相关
+
+时长：<span class="token number">3</span>个月	持续迭代
+一体化管理平台
+	简介：基础服务的应用管理，包括用户、角色、组织、地区、子系统、流程配置、数据库源、表单
+	微服务：
+		用户管理服务（用户、角色、组织
+		系统管理服务（地区、子系统、文件、数据库源）
+		流程服务（流程审批、流程表单）
+		认证鉴权服务
+	框架：
+		后端：spring cloud netflix <span class="token operator">+</span> mysql <span class="token operator">+</span> druid <span class="token operator">+</span> reids <span class="token operator">+</span> activiti <span class="token operator">+</span> MQ（active、rabbit）
+		前端：VueJS，基于d2admin框架改造，集成agilebpm流程编辑器，支持Vue表单
+	总结：
+		学习了项目拆分，数据交互对接；消息中间件的应用；多租户设计，基于动态数据库源；
+
+时长：<span class="token number">3</span>个月	持续迭代
+人员：<span class="token number">12</span><span class="token operator">-</span><span class="token number">15</span>
+	后端<span class="token number">6</span>人：杨晗、夏元勋、张文强、（孙建宇、王金鹏）、（李兴浩）、袁学港
+	前端<span class="token number">2</span>人：秦瑶（高二进）、顾红梅
+	管理：张晓宁（储海涛）
+	PC库管<span class="token number">2</span>人：崔健、方应明
+	App安卓<span class="token number">1</span>人：陆腾
+	区块链<span class="token number">1</span>人：储海涛、张和伟
+	GIS2人：曾宁、黄林
+	替补：n
+	
+宅基地管理平台
+	简介：
+		农村宅基地建房申请相关业务，包括建房申请、产权交接、数据汇报
+		根据国家宅基地建房标准相关政策，为了加快农村宅基地建房工作，提高工作效率和服务水平，以数字化形式进行信息管理，支持各地区特色定制功能的一套完整宅基地信息管理平台
+	服务应用：
+		微服服务
+			基础服务：参考一体化管理平台
+			业务服务：
+				宅基地服务：业务交互接口
+				统计服务：所有统计数据的接口，
+			报表系统：集成URport的服务，其他项目通用
+			
+	技术栈：
+		后端：
+			SringBoot2<span class="token punctuation">.</span>X，Srping Cloud Hoxton
+			postgresql <span class="token operator">+</span> geoserver <span class="token operator">+</span> druid <span class="token operator">+</span> mybatis<span class="token operator">-</span>plus
+			reids <span class="token operator">+</span> activiti <span class="token operator">+</span> MQ（active、rabbit）<span class="token operator">+</span> ES <span class="token operator">+</span> MinIO（文件存储）
+		前端：VueJS <span class="token operator">+</span> VueX <span class="token operator">+</span> Nginx
+		小程序：基于H5方式开发
+		App：安卓端
+		部署：Jenkins <span class="token operator">+</span> Docker <span class="token operator">+</span> Portainer
+		
+	总结：
+		熟悉使用postgresql结合geoserver的空间数据应用
+		熟悉ES的应用
+		熟悉XXL<span class="token operator">-</span>JOB的应用
+		流程引擎的应用和开源二次开发
+
+	版本：国家开发<span class="token number">104</span>个试点市，县级市
+		基础版试点：江西鹰潭市余江区
+		丰富定制版：<span class="token number">9</span>个
+			江西鹰潭市余江区
+			江苏无锡市武进区
+			安徽池州市东至县
+			浙江温州市龙港市
+			四川眉山市彭山区
+			浙江湖州市德清县、莫干山镇
+			湖北省恩施市（地级市）
+			江苏苏州市昆山市
+			安徽省滁州市（地级市）
+		基础版扩展：<span class="token number">24</span>个
+			福建三明市泰宁县
+			黑龙江大庆市杜尔伯特蒙古族自治县
+			陕西西安市高陵区
+			重庆市大足区
+			辽宁沈阳沈北新区
+			福建泉州市晋江区
+			广西柳州市鹿寨区
+			内蒙古通辽市开鲁县
+			山东潍坊市寒亭区
+			四川成都市郫都区
+			浙江金华市兰溪市
+			江苏宿迁市泗阳县
+			山西晋城市泽州县
+			湖南永州市宁远县
+			陕西榆林市神木市
+			河南平顶山市宝丰县
+			江苏淮安市盱眙县
+			安徽滁州市凤阳县
+			湖北省黄石市大冶市
+			内蒙古巴彦淖尔市五原县
+			山东青岛市平度县
+			四川资阳市雁江区
+			云南昆明市宜良县
+			湖北省荆门市沙洋县
+		租户版：适用于基础扩展版
+
+	业务描述
+		其他模块：
+			数据汇交：基本数据的录入口，用于后续业务处理。
+				通用数据：政策法规、新闻推荐、需求反馈
+				农户数据：个人信息、家庭信息
+				宅基地数据：基本信息
+				监察数据：日常巡查、信访举报、纠纷仲裁
+				
+			数据分析：
+				所有权分析：即所有宅基地的相关数据
+				资格权分析：统计资格权户主的相关数据
+				使用权分析：有偿无偿、整体部分的退出；
+				以不同维度统计分析数据，比如行政区划、日期、类型等等
+				
+			一张图：即大屏报表，地图功能<span class="token operator">+</span>统计分析，通过大屏配置实现
+				台账统计：根据条件筛选实现，ES接口
+				区域统计：根据地图筛选实现，ES接口<span class="token operator">+</span>geoserver接口
+				
+			综合监管：以不同维度监控监测分析宅基地用地情况，地图相关应用
+				影像对比
+				轨迹管理：追踪、定位
+				卷帘对比
+				遥感识别
+				
+			系统配置
+				流程配置：
+					节点附件配置：根据流程节点配置需要上传的附件资料
+					节点打印配置：根据流程节点配置需要打印的表单
+					消息待办配置：根据设置时长，触发消息通知
+				证书配置：根据行政区划配置证书资料。比如建房申请流程中的批准书、公示牌
+				图层配置：
+					大致图层结构：天地图地图（矢量、影像）<span class="token operator">+</span> 天地图标记（矢量、影像）<span class="token operator">+</span> 实际图层（县乡镇村的区域图 <span class="token operator">+</span> 地类图斑 <span class="token operator">+</span> 宗地自然幢）
+					业务数据：根据行政区划配置geoserver发布的图层数据。
+				大屏配置：根据需求组合显示独立的统计组件，作用是优化一张图的加载和定制需求
+				系统配置：
+					菜单配置：模块化或顶部导航
+					首页配置：图层配置 <span class="token operator">+</span> 固定的统计模块
+		
+			联合审批
+				个人审批
+					发起申请
+					我的待办
+					我的已办
+					我的发起
+				综合审批
+					审批案件
+					归档案件
+					
+			主要流程业务：		
+				建房审批流程（分不同地区的流程，大致如下）
+					村民理事会受理：填报申请表，附件资料
+					村组织审查：负责人签章，附件资料
+					乡镇受理：
+					勘查：app填报，四到场<span class="token operator">-</span>申请审查（填报、签到、上传附件）
+					并行流程：农业农村、自然资源、其他相关部门审批，各自负责人签章
+					乡镇审批：生成批准书、生成公示牌（二维码），附件资料
+					放线：app填报，四到场<span class="token operator">-</span>丈量批放（填报、签到、上传附件）
+					巡查：app填报，四到场<span class="token operator">-</span>建房巡查（填报、签到、上传附件）
+					验收受理：负责人签章，app填报，四到场<span class="token operator">-</span>竣工核查（填报、签到、上传附件）
+					并行流程：农业农村、自然资源验收，各自负责人签章
+					乡镇验收：负责人签章，附件资料，数据备案（异步）存查
+				房屋流转流程
+					农户申请
+					村组审核
+					乡镇审批
+					合同网签
+					数据备案
+					权属变更
+				退出抵押流程
+					农户申请
+					村组审核
+					乡镇受理
+					现场探勘
+					乡镇审批
+					资料公示
+					签订协议
+					乡镇验收
+					分支流程：
+						签订承诺书，数据备案：（有偿退出、整体退出）
+						补偿登记，数据备案：（有偿退出、部分退出）
+						数据备案：（无偿退出）
+	自适应设计：
+		<span class="token number">1.</span> 多租户，解决不同地区不同数据库的数据分离问题
+		<span class="token number">2.</span> 可配置流程，可以由非开发人员自主设计不同地区的审批流程
+		<span class="token number">3.</span> 可配置流程节点附件，可以由非开发人员自主设计不同流程节点的审批附件
+		<span class="token number">4.</span> 可配置流程表单，根据需求开发好表单，由非开发人员自主选择节点表单，解决vue动态路由表单嵌入问题
+		<span class="token number">4.</span> 扩展流程人员的行政区划，解决同一流程节点同一角色审批不同行政区划案件
+		
+	<span class="token number">1</span>、流程可配置
+	<span class="token number">2</span>、流程节点信息可配置：人员、表单、附件资料、地图、报表
+	
+
+
+
+项目技术：
+		<span class="token number">1</span>、前后端分离的微服务架构，小程序、App基于H5方式开发
+		<span class="token number">2</span>、前端基于Vue框架开发
+		<span class="token number">3</span>、后端基于SringBoot2<span class="token punctuation">.</span>X，Srping Cloud Hoxton架构开发
+		<span class="token number">5</span>、测绘地图发布于Geoserver，结合天地图叠层展示
+		<span class="token number">6</span>、数据库采用POSTGRESQL，缓存数据库Redis，mybatis<span class="token operator">-</span>plus
+		<span class="token number">7</span>、集成ES搜索引擎，支持图层数据搜索
+		<span class="token number">7</span>、通过可持续化构建平台Jenkins和容器化技术Docker部署发布
+		<span class="token number">8</span>、服务部署支持有无网络隔离的云服务器外网和政务内网，由Nginx代理转发统一网关
+		<span class="token number">9</span>、报表系统，基于开源框架uReport二次开发
+			
+			
+项目简介：统一管理用户角色权限的架构体系，方便接入其他项目业务的一体化管理平台
+项目模块：
+		<span class="token number">1</span>、系统设置：用户管理、角色管理、组织管理、行政区划管理、子系统管理、数据库源管理
+		<span class="token number">2</span>、流程设置：流程定义、流程实例、流程任务、表单管理
+项目技术：
+		<span class="token number">1</span>、前后端分离的微服务架构
+		<span class="token number">2</span>、前端基于Vue框架开发
+		<span class="token number">3</span>、后端基于SringBoot2<span class="token punctuation">.</span>X，Srping Cloud Hoxton，Spring Cloud Alibaba组件
+		<span class="token number">4</span>、基于Spring Security 实现基于RBAC、jwt和oauth2的统一权限认证
+		<span class="token number">5</span>、多租户模式支持多种数据库，项目应用MYSQL、POSTGRESQL，缓存数据库Redis
+		<span class="token number">6</span>、流程审批基于流程引擎Activiti定制化二次开发，支持Vue表单和原生表单
+		<span class="token number">7</span>、集成三种消息消费模式：同步、redis、消息中间件ActiveMQ
+		<span class="token number">8</span>、集成三种文件存储方式：相对目录、数据库存储、文件存储系统mino
+		<span class="token number">9</span>、分布式调度：XXL<span class="token operator">-</span>JOB定时任务调度
+		
+项目代码	
+	一体化管理平台
+		后端：
+			agilebpm<span class="token operator">-</span>source（jar集成，无源码）
+			agilebpm（源码，反编译重构）
+			
+			flowbpm<span class="token operator">-</span>wf（流程核心代码，混淆打包）
+			flowbpm（基础服务）
+			
+		前端：
+			authority
+			
+	宅基地管理平台
+		后端：
+			homestead
+			homestead<span class="token operator">-</span>bpm（flowbpm<span class="token operator">+</span>flowbpm<span class="token operator">-</span>wf）
+		
+	银农直连：
+		后端：agilebpm
+		前端：agritobank
+
+Java基础（集合、IO、多线程、JVM）
+mysql、postgresql
+spring、springboot
+spring cloud（erueka、feign、hystrix、gateway、zuul、consul）、spring cloud Alibaba 
+ES、rabbitMQ、activeMQ、kafkaMQ、redis
+Linux、docker、K8s、nginx		
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2022/5/27 上午11:15:53</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.48fbceba.js" defer></script><script src="/blog/assets/js/3.6aecd760.js" defer></script><script src="/blog/assets/js/1.be01cd42.js" defer></script><script src="/blog/assets/js/53.3d60754c.js" defer></script>
+  </body>
+</html>

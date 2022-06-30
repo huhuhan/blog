@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux 命令总结 | 寒冷如铁</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blog/favicon.ico">
+    <script language="javascript" type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/blog/js/MouseClickEffect.js"></script>
+    <meta name="description" content="好奇就尝试，喜欢就坚持！">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.01ca31a9.css" as="style"><link rel="preload" href="/blog/assets/js/app.48fbceba.js" as="script"><link rel="preload" href="/blog/assets/js/3.6aecd760.js" as="script"><link rel="preload" href="/blog/assets/js/1.be01cd42.js" as="script"><link rel="preload" href="/blog/assets/js/47.23e5676d.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.97bb739b.js"><link rel="prefetch" href="/blog/assets/js/11.4914fba6.js"><link rel="prefetch" href="/blog/assets/js/12.7b72af52.js"><link rel="prefetch" href="/blog/assets/js/13.6e829486.js"><link rel="prefetch" href="/blog/assets/js/14.c73587f7.js"><link rel="prefetch" href="/blog/assets/js/15.5c0741f3.js"><link rel="prefetch" href="/blog/assets/js/16.660c2708.js"><link rel="prefetch" href="/blog/assets/js/17.a980ca2e.js"><link rel="prefetch" href="/blog/assets/js/18.d571da99.js"><link rel="prefetch" href="/blog/assets/js/19.d926fc68.js"><link rel="prefetch" href="/blog/assets/js/20.90ca4752.js"><link rel="prefetch" href="/blog/assets/js/21.6c8ba874.js"><link rel="prefetch" href="/blog/assets/js/22.61f15ce5.js"><link rel="prefetch" href="/blog/assets/js/23.88585ff6.js"><link rel="prefetch" href="/blog/assets/js/24.61b7cfd9.js"><link rel="prefetch" href="/blog/assets/js/25.2979295c.js"><link rel="prefetch" href="/blog/assets/js/26.136a20d7.js"><link rel="prefetch" href="/blog/assets/js/27.a7ab0701.js"><link rel="prefetch" href="/blog/assets/js/28.ad4234eb.js"><link rel="prefetch" href="/blog/assets/js/29.59494356.js"><link rel="prefetch" href="/blog/assets/js/30.643338cc.js"><link rel="prefetch" href="/blog/assets/js/31.7f64a278.js"><link rel="prefetch" href="/blog/assets/js/32.bea4dda2.js"><link rel="prefetch" href="/blog/assets/js/33.e203752a.js"><link rel="prefetch" href="/blog/assets/js/34.e92e5a06.js"><link rel="prefetch" href="/blog/assets/js/35.98217263.js"><link rel="prefetch" href="/blog/assets/js/36.16a526e5.js"><link rel="prefetch" href="/blog/assets/js/37.9b5be288.js"><link rel="prefetch" href="/blog/assets/js/38.89b9e4cf.js"><link rel="prefetch" href="/blog/assets/js/39.b33f1d92.js"><link rel="prefetch" href="/blog/assets/js/4.789e3d50.js"><link rel="prefetch" href="/blog/assets/js/40.bbb746b7.js"><link rel="prefetch" href="/blog/assets/js/41.81f131ab.js"><link rel="prefetch" href="/blog/assets/js/42.474cb45b.js"><link rel="prefetch" href="/blog/assets/js/43.fe269b94.js"><link rel="prefetch" href="/blog/assets/js/44.123909bf.js"><link rel="prefetch" href="/blog/assets/js/45.85e17df3.js"><link rel="prefetch" href="/blog/assets/js/46.d4946e59.js"><link rel="prefetch" href="/blog/assets/js/48.cd683d9e.js"><link rel="prefetch" href="/blog/assets/js/49.50ed75e0.js"><link rel="prefetch" href="/blog/assets/js/5.01840e8d.js"><link rel="prefetch" href="/blog/assets/js/50.b8d794d9.js"><link rel="prefetch" href="/blog/assets/js/51.7f544d8b.js"><link rel="prefetch" href="/blog/assets/js/52.ff9c7071.js"><link rel="prefetch" href="/blog/assets/js/53.3d60754c.js"><link rel="prefetch" href="/blog/assets/js/54.c16fde39.js"><link rel="prefetch" href="/blog/assets/js/55.d8bb3990.js"><link rel="prefetch" href="/blog/assets/js/56.96395e5f.js"><link rel="prefetch" href="/blog/assets/js/57.047ce1b3.js"><link rel="prefetch" href="/blog/assets/js/58.ce766e49.js"><link rel="prefetch" href="/blog/assets/js/59.81e52f84.js"><link rel="prefetch" href="/blog/assets/js/6.94b10ce8.js"><link rel="prefetch" href="/blog/assets/js/60.e63008d3.js"><link rel="prefetch" href="/blog/assets/js/61.4a052d92.js"><link rel="prefetch" href="/blog/assets/js/62.220c4af8.js"><link rel="prefetch" href="/blog/assets/js/63.517c928f.js"><link rel="prefetch" href="/blog/assets/js/64.d3c1e4eb.js"><link rel="prefetch" href="/blog/assets/js/65.3b8e9eba.js"><link rel="prefetch" href="/blog/assets/js/66.2f463277.js"><link rel="prefetch" href="/blog/assets/js/67.2a90af5f.js"><link rel="prefetch" href="/blog/assets/js/68.aacdaa46.js"><link rel="prefetch" href="/blog/assets/js/69.42b7a9b0.js"><link rel="prefetch" href="/blog/assets/js/7.63c57787.js"><link rel="prefetch" href="/blog/assets/js/70.9dbc2432.js"><link rel="prefetch" href="/blog/assets/js/71.1172d9ad.js"><link rel="prefetch" href="/blog/assets/js/72.db1b51ad.js"><link rel="prefetch" href="/blog/assets/js/73.cd8e6d83.js"><link rel="prefetch" href="/blog/assets/js/74.e79b640b.js"><link rel="prefetch" href="/blog/assets/js/75.8325077c.js"><link rel="prefetch" href="/blog/assets/js/76.1a23476c.js"><link rel="prefetch" href="/blog/assets/js/77.81dab7dd.js"><link rel="prefetch" href="/blog/assets/js/78.84c7cec2.js"><link rel="prefetch" href="/blog/assets/js/79.316dd645.js"><link rel="prefetch" href="/blog/assets/js/8.496901ef.js"><link rel="prefetch" href="/blog/assets/js/80.a010d785.js"><link rel="prefetch" href="/blog/assets/js/81.ec077e16.js"><link rel="prefetch" href="/blog/assets/js/82.42ae540f.js"><link rel="prefetch" href="/blog/assets/js/83.24b93fad.js"><link rel="prefetch" href="/blog/assets/js/84.2babe20b.js"><link rel="prefetch" href="/blog/assets/js/85.5ff48ca8.js"><link rel="prefetch" href="/blog/assets/js/9.0ed04424.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.01ca31a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>寒冷如铁</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>寒铁</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">寒冷如铁</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/build/" class="nav-link"><i class="iconfont undefined"></i>
+  build
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/db/" class="nav-link"><i class="iconfont undefined"></i>
+  db
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/workflow/" class="nav-link"><i class="iconfont undefined"></i>
+  workflow
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/source/" class="nav-link"><i class="iconfont undefined"></i>
+  source
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/network/" class="nav-link"><i class="iconfont undefined"></i>
+  network
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/project/" class="nav-link"><i class="iconfont undefined"></i>
+  project
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/share/" class="nav-link"><i class="iconfont undefined"></i>
+  share
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/software/" class="nav-link"><i class="iconfont undefined"></i>
+  software
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/solution/" class="nav-link"><i class="iconfont undefined"></i>
+  solution
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/tomcat/" class="nav-link"><i class="iconfont undefined"></i>
+  tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/web/" class="nav-link"><i class="iconfont undefined"></i>
+  web
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/views/guide.html" class="nav-link"><i class="iconfont reco-other"></i>
+  记录
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      外链
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/huhuhan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/huhu_han" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  有道云笔记
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  LeadCloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://cloud.seafile.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Seafile
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://huhu_han.gitee.io/downgit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  DownGit
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><img src="/blog/avatar.png" alt="author-avatar" class="personal-img" data-v-b038cec6> <h3 class="name" data-v-b038cec6>
+    寒铁
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>71</h3> <h6 data-v-b038cec6>文章</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>18</h3> <h6 data-v-b038cec6>标签</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/build/" class="nav-link"><i class="iconfont undefined"></i>
+  build
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/db/" class="nav-link"><i class="iconfont undefined"></i>
+  db
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/docker/" class="nav-link"><i class="iconfont undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/workflow/" class="nav-link"><i class="iconfont undefined"></i>
+  workflow
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/source/" class="nav-link"><i class="iconfont undefined"></i>
+  source
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/network/" class="nav-link"><i class="iconfont undefined"></i>
+  network
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/project/" class="nav-link"><i class="iconfont undefined"></i>
+  project
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/share/" class="nav-link"><i class="iconfont undefined"></i>
+  share
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/software/" class="nav-link"><i class="iconfont undefined"></i>
+  software
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/solution/" class="nav-link"><i class="iconfont undefined"></i>
+  solution
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/spring/" class="nav-link"><i class="iconfont undefined"></i>
+  spring
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/tomcat/" class="nav-link"><i class="iconfont undefined"></i>
+  tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/web/" class="nav-link"><i class="iconfont undefined"></i>
+  web
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/views/guide.html" class="nav-link"><i class="iconfont reco-other"></i>
+  记录
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      外链
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/huhuhan" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/huhu_han" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  有道云笔记
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://console.leancloud.app/#/apps" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  LeadCloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://cloud.seafile.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  Seafile
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://huhu_han.gitee.io/downgit" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  DownGit
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux 命令总结</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/views/linux/linux.html#常用脚本-适用linux" class="sidebar-link">常用脚本，适用Linux</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/views/linux/linux.html#常用脚本-适用windows" class="sidebar-link">常用脚本，适用Windows</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/views/linux/linux.html#普通命令" class="sidebar-link">普通命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#pwd-当前路径" class="sidebar-link">[pwd] 当前路径</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#echo-输出信息" class="sidebar-link">[echo] 输出信息</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#mkdir-touch-创建目录文件" class="sidebar-link">[mkdir|touch] 创建目录文件</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#more-less-查看" class="sidebar-link">[more] [less] 查看</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#wc-统计文本" class="sidebar-link">[wc] 统计文本</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#which-whereis-搜索" class="sidebar-link">[which] [whereis] 搜索</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#cat-less-head-tail-查看文本" class="sidebar-link">[cat|less|head|tail] 查看文本</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#head-查看文本" class="sidebar-link">[head]  查看文本</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#rm-删除文件目录" class="sidebar-link">[rm] 删除文件目录</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#mv-重名或移动" class="sidebar-link">[mv] 重名或移动</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#cp-复制" class="sidebar-link">[cp] 复制</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#ln-创建超链接" class="sidebar-link">[ln] 创建超链接</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#tar-备份还原" class="sidebar-link">[tar] 备份还原</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#zip-unzip-压缩解压" class="sidebar-link">[zip/unzip] 压缩解压</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#gzip-gunzip-压缩解压" class="sidebar-link">[gzip/gunzip] 压缩解压</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#vim-新建编辑" class="sidebar-link">[vim] 新建编辑</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#chmod-chown-管理权限" class="sidebar-link">[chmod | chown] 管理权限</a></li></ul></li><li><a href="/blog/views/linux/linux.html#进阶命令" class="sidebar-link">进阶命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#find-搜索文件" class="sidebar-link">[find] 搜索文件</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#grep-匹配字符" class="sidebar-link">[grep] 匹配字符</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#cut-选取显示" class="sidebar-link">[cut] 选取显示</a></li></ul></li><li><a href="/blog/views/linux/linux.html#运维命令" class="sidebar-link">运维命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#用户管理" class="sidebar-link">用户管理</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#df-显示挂载信息" class="sidebar-link">[df] 显示挂载信息</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#fdisk-分区" class="sidebar-link">[fdisk] 分区</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#swapon-交换" class="sidebar-link">[swapon] 交换</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#mount-挂载" class="sidebar-link">[mount] 挂载</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#du-显示目录大小" class="sidebar-link">[du] 显示目录大小</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#journalctl-日志命令" class="sidebar-link">[journalctl]  日志命令</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#lsof-查看进程" class="sidebar-link">[lsof]  查看进程</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#netstat-网络信息" class="sidebar-link">[netstat] 网络信息</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#ps-进程信息" class="sidebar-link">[ps] 进程信息</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#kill-发送信号" class="sidebar-link">[kill] 发送信号</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#top-动态进程信息" class="sidebar-link">[top] 动态进程信息</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#ping-网络通信" class="sidebar-link">[ping] 网络通信</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#free-查看内存" class="sidebar-link">[free] 查看内存</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#ifconfig-查看网络设备" class="sidebar-link">[ifconfig] 查看网络设备</a></li></ul></li><li><a href="/blog/views/linux/linux.html#系统命令" class="sidebar-link">系统命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#重定向输出输入" class="sidebar-link">重定向输出输入</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#nohup-后台挂起" class="sidebar-link">[nohup] 后台挂起</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#last-登录用户记录" class="sidebar-link">[last] 登录用户记录</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#hostnamectl-主机名" class="sidebar-link">[hostnamectl] 主机名</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#系统信息" class="sidebar-link">系统信息</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#sed-输入" class="sidebar-link">[sed] 输入</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#service" class="sidebar-link">[service]</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#chkconfig" class="sidebar-link">chkconfig</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#history-命令记录" class="sidebar-link">[history] 命令记录</a></li></ul></li><li><a href="/blog/views/linux/linux.html#插件命令" class="sidebar-link">插件命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#rpm" class="sidebar-link">[rpm]</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#yum" class="sidebar-link">[yum]</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#wget-下载" class="sidebar-link">[wget] 下载</a></li></ul></li><li><a href="/blog/views/linux/linux.html#环境变量" class="sidebar-link">环境变量</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/views/linux/linux.html#防火墙常用命令" class="sidebar-link">防火墙常用命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/views/linux/linux.html#云服务器外网环境部署" class="sidebar-link">云服务器外网环境部署</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/views/linux/linux.html#运维参考" class="sidebar-link">运维参考</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#禁用root" class="sidebar-link">禁用ROOT</a></li><li class="sidebar-sub-header"><a href="/blog/views/linux/linux.html#禁用口令登录" class="sidebar-link">禁用口令登录</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Linux 命令总结</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>寒铁</span>
+            
+          <span data-v-64685f0e>2020 - </span>
+          2022
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>Linux 命令总结</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>寒铁</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2020-02-28</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/blog/views/linux/linux.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      linux
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><blockquote><p>代码块中 [] 表示可选参数。<a href="https://www.runoob.com/linux/linux-command-manual.html" target="_blank" rel="noopener noreferrer">参考文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h2 id="常用脚本-适用linux"><a href="#常用脚本-适用linux" class="header-anchor">#</a> 常用脚本，适用Linux</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查询应用、或进程号</span>
+<span class="token function">ps</span> -ef<span class="token operator">|</span><span class="token function">grep</span> java
+
+<span class="token comment"># 查找frp的进程号【grep -v grep】过滤当前命名，【awk '{print $2}'】提取第2列的进程号</span>
+<span class="token function">ps</span> -aux<span class="token operator">|</span><span class="token function">grep</span> frp<span class="token operator">|</span> <span class="token function">grep</span> -v <span class="token function">grep</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$2</span>}'</span>
+    
+<span class="token comment"># 查看端口占用</span>
+ss -lntpd <span class="token operator">|</span> <span class="token function">grep</span> :22
+
+<span class="token comment"># 查询进程信息</span>
+<span class="token function">lsof</span> -p <span class="token punctuation">[</span>进程号<span class="token punctuation">]</span>
+
+<span class="token comment"># 同个窗口没关闭，后台挂起后，通过jobs获取进程号</span>
+<span class="token function">nohup</span> <span class="token punctuation">[</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span> <span class="token operator">&amp;</span>
+<span class="token function">jobs</span> <span class="token punctuation">[</span>-l<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="常用脚本-适用windows"><a href="#常用脚本-适用windows" class="header-anchor">#</a> 常用脚本，适用Windows</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">netstat</span> -aon <span class="token operator">|</span> findstr <span class="token number">8080</span>
+tasklist<span class="token operator">|</span>findstr <span class="token string">&quot;7824&quot;</span>
+taskkill -f -pid <span class="token punctuation">[</span>PID<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>================================================</p> <h2 id="普通命令"><a href="#普通命令" class="header-anchor">#</a> 普通命令</h2> <blockquote><p>参数用法，格式：<code>命令 -参数 对象</code></p></blockquote> <h3 id="pwd-当前路径"><a href="#pwd-当前路径" class="header-anchor">#</a> [pwd] 当前路径</h3> <h3 id="echo-输出信息"><a href="#echo-输出信息" class="header-anchor">#</a> [echo] 输出信息</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 打印jdk环境变量</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$JAVA_HOME</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="mkdir-touch-创建目录文件"><a href="#mkdir-touch-创建目录文件" class="header-anchor">#</a> [mkdir|touch] 创建目录文件</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 创建目录</span>
+<span class="token function">mkdir</span> t1
+<span class="token comment"># v打印创建信息；p递归创建，保证空父级目录创建</span>
+<span class="token function">mkdir</span> -vp t1/t2/t3/t4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 创建文件</span>
+<span class="token function">touch</span> xx.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="more-less-查看"><a href="#more-less-查看" class="header-anchor">#</a> [more] [less] 查看</h3> <p>按页、行查看文本</p> <ul><li><p>more：只能向前翻页</p> <ul><li>enter键：加载一行显示</li> <li>space键：加载N行显示(即窗口高度)</li></ul></li> <li><p>less ：上下移动查看</p> <ul><li>上下键</li> <li>q：退出，类似<code>vim</code>命令</li></ul></li></ul> <h3 id="wc-统计文本"><a href="#wc-统计文本" class="header-anchor">#</a> [wc] 统计文本</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">wc</span> xx.log
+<span class="token comment"># 显示结果</span>
+行数 字符数 字节数（字数）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="which-whereis-搜索"><a href="#which-whereis-搜索" class="header-anchor">#</a> [which] [whereis] 搜索</h3> <p>搜索系统命令、系统程序名</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">which</span> <span class="token function">ls</span>
+<span class="token function">whereis</span> <span class="token function">ls</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="cat-less-head-tail-查看文本"><a href="#cat-less-head-tail-查看文本" class="header-anchor">#</a> [cat|less|head|tail] 查看文本</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 全文查看 </span>
+<span class="token comment"># n显示行数</span>
+<span class="token function">cat</span> -n xx.log
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 分页查看 </span>
+<span class="token comment"># 打开后，字母按键操作</span>
+<span class="token comment"># F向前翻屏，B向后翻屏，</span>
+<span class="token comment"># J向前移动一行，K向后移动一行</span>
+<span class="token comment"># G翻到最后也，g翻到第一页，这里区分大小写字母</span>
+<span class="token comment"># q退出</span>
+
+<span class="token comment"># 命令历史记录用分页查看</span>
+<span class="token function">history</span> <span class="token operator">|</span> <span class="token function">less</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 显示前几行，默认10行</span>
+<span class="token function">head</span> xx.log
+<span class="token comment"># 显示前3行</span>
+<span class="token function">head</span> -3 xx.log
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 显示最后几行，默认10</span>
+<span class="token function">tail</span> xx.log
+<span class="token function">tail</span> -3 xx.log
+<span class="token comment"># 每秒刷新</span>
+<span class="token function">tail</span> -f xx.log
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="head-查看文本"><a href="#head-查看文本" class="header-anchor">#</a> [head]  查看文本</h3> <h3 id="rm-删除文件目录"><a href="#rm-删除文件目录" class="header-anchor">#</a> [rm] 删除文件目录</h3> <ul><li>r：递归删除，适合目录删除</li> <li>f：强制删除，不询问，适合目录删除</li></ul> <h3 id="mv-重名或移动"><a href="#mv-重名或移动" class="header-anchor">#</a> [mv] 重名或移动</h3> <ul><li>f：强制覆盖，不询问</li> <li>b：若覆盖（已存在文件），会备份原文件，文件名后缀加<code>~</code></li> <li>n：不覆盖</li></ul> <h3 id="cp-复制"><a href="#cp-复制" class="header-anchor">#</a> [cp] 复制</h3> <ul><li>r： 递归复制，适用目录</li> <li>b：若覆盖（已存在文件），会备份原文件，文件名后缀加<code>~</code></li> <li>n：不覆盖</li> <li>强制覆盖命令**\cp**：如<code>\cp a.log b.log</code></li></ul> <h3 id="ln-创建超链接"><a href="#ln-创建超链接" class="header-anchor">#</a> [ln] 创建超链接</h3> <p>创建超链接，即另一个位置创建同步链接。默认是硬链接，比如删除需要同时删除</p> <ul><li>b：	删除，覆盖以前建立的链接</li> <li>s：	软链接(符号链接)，仅快捷文件不占空间</li></ul> <h3 id="tar-备份还原"><a href="#tar-备份还原" class="header-anchor">#</a> [tar] 备份还原</h3> <p>备份还原文件（打包非压缩，压缩只是其中一个参数接口调用）打包文件后缀为[.tar]</p> <ul><li>v：显示执行过程</li> <li>f：执行压缩文件, 作最后个参数</li> <li>备份还原指令参数
+<ul><li>c：创建备份文件，即打包</li> <li>x：还原备份文件，即解包</li> <li>t：列出备份包中的文件</li></ul></li> <li>压缩解压指令参数
+<ul><li>z：调用gzip指令处理备份文件，后缀一般为[.tar.gz]或[.tgz]，后缀可自定义，主要容易区分</li> <li>j：调用bzip2指令处理备份文件，后缀一般为[.tar.bz]或[.tbz]</li></ul></li> <li>C：备份指定目录下，默认当前目录</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># -cvf 备份</span>
+<span class="token function">tar</span> -cvf my.tar *.log
+<span class="token comment"># -tvf 查看</span>
+<span class="token function">tar</span> -tvf my.tar
+<span class="token comment"># -xvf 还原</span>
+<span class="token function">tar</span> -xvf my.tar
+<span class="token comment"># -cvf 备份到/myDir下</span>
+<span class="token function">tar</span> -cvf my.tar *.log -C /myDir
+<span class="token comment"># 压缩解压，参数前添加相关压缩指令参数，如 -zcvf、-zxvf</span>
+
+<span class="token comment"># 排除文件目录--exclude=，写在最前面</span>
+<span class="token comment">## --exclude-vcs排除版本控制目录，如.git或.svn</span>
+<span class="token function">tar</span> -zcvf bpm-ui.tar.gz bpm-ui  --exclude-vcs --exclude<span class="token operator">=</span>bpm-ui/.idea
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="zip-unzip-压缩解压"><a href="#zip-unzip-压缩解压" class="header-anchor">#</a> [zip/unzip] 压缩解压</h3> <ul><li>压缩解压，后缀[.zip]</li> <li>r: 递归压缩</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 压缩当前files目录， 压缩包内根目录为files</span>
+<span class="token function">zip</span> -r my.zip files <span class="token punctuation">[</span>压缩文件所在目录<span class="token punctuation">]</span>
+<span class="token comment"># 压缩当前files目录，压缩包不包含files目录，则在files目录下运行</span>
+<span class="token function">zip</span> -r my.zip * <span class="token punctuation">[</span>压缩文件所在目录<span class="token punctuation">]</span>
+<span class="token comment"># 解压/xx/my.zip 到当前目录</span>
+<span class="token function">unzip</span> /xx/my.zip -d <span class="token builtin class-name">.</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="gzip-gunzip-压缩解压"><a href="#gzip-gunzip-压缩解压" class="header-anchor">#</a> [gzip/gunzip] 压缩解压</h3> <p>压缩解压，后缀[.gz]</p> <h3 id="vim-新建编辑"><a href="#vim-新建编辑" class="header-anchor">#</a> [vim] 新建编辑</h3> <ul><li>启动后默认进入<strong>命令模式</strong></li> <li><code>i</code>切换到<strong>输入模式</strong>，以输入字符</li> <li><code>ESC</code>退出当前模式，切换到<strong>命令模式</strong></li> <li><code>:</code>切换到<strong>底线命令模式</strong>，以在最底一行输入命令。</li> <li>底线命令模式下，<code>q</code>表示退出， <code>w</code>表示保存，通常一起用，<code>wq</code></li> <li>常用命令：切换输入<code>i</code>、保存退出<code>:wq</code>、正常退出<code>:q</code>、强制退出不保存<code>:q!</code></li></ul> <h3 id="chmod-chown-管理权限"><a href="#chmod-chown-管理权限" class="header-anchor">#</a> [chmod | chown] 管理权限</h3> <p>管理文件、目录的权限。用户权限分三级：所有者、群组用户、其他用户</p> <ul><li>读|写|执行:		数字权限值4|2|1可累加</li> <li>读|写|执行:		字母权限值r|w|x可累加</li> <li>三级用户：		字母对应值u|g|o|a=u+g+o</li> <li>R：目录下文件、子目录递归赋予相同权限</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 所有用户可读可写可执行</span>
+chomd <span class="token number">777</span> tmp.txt
+chomd <span class="token assign-left variable">a</span><span class="token operator">=</span>rwx tmp.txt
+<span class="token comment"># 所有用户添加可执行权限，+添加-取消=唯一设定</span>
+chomd a+x tmp.txt
+<span class="token comment"># 其他用户只可执行</span>
+chomd <span class="token assign-left variable">ug</span><span class="token operator">=</span>rwx,o<span class="token operator">=</span>x tmp.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 将文件所有者权限改为huhuhan用户</span>
+<span class="token function">chown</span> huhuan xx.txt
+<span class="token comment"># 将目录及目录下的文件统一修改</span>
+<span class="token function">chown</span> -R huhuhan /home/test
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="进阶命令"><a href="#进阶命令" class="header-anchor">#</a> 进阶命令</h2> <blockquote><p>下面的进阶命令一般都会多个命令拼接一起用，逻辑运算符，适合多个命令、选项命令使用</p> <ul><li>-a：与，不填即默认</li> <li>-o：或</li> <li>-not或者！：非</li></ul></blockquote> <h3 id="find-搜索文件"><a href="#find-搜索文件" class="header-anchor">#</a> [find] 搜索文件</h3> <p>搜索文件、目录，返回路径，格式<code>find [路径] -[选项] [搜索条件] -[执行命令]</code></p> <ul><li><p><code>[路径]</code>不填默认当前，搜索结果为在当下路径的<strong>相对路径</strong></p></li> <li><p><code>-[执行命令]</code>不填默认<code>-print</code>，即标准输出打印到控制台</p></li> <li><p><code>[搜索条件]</code>建议都加上双引号，特殊值容易识别为其他命令选项</p></li> <li><p><strong>选项</strong>：</p> <ul><li><p>name：按文件名，<code>iname</code>忽略大小写，支持<code>pattern</code>正则形式，如 &quot;*.log&quot;</p></li> <li><p>user：按所属用户，适合权限分配用户的系统，非只有用root账户的系统</p></li> <li><p>size：按文件大小，参数n，单位c(1字节，默认)、w(2字节)、b(512字节)、k、M、G</p> <ul><li>n：等于n</li> <li>-n： 小于n，n以内</li> <li>+n：大于n，n以外</li></ul></li> <li><p>mtime：n*24小时<strong>被修改过数据</strong>的文件，n参考以上，类似命令<code>ctime</code>是<strong>被修改过状态</strong>的</p></li> <li><p>mmin：n分钟<strong>被修改过数据</strong>的文件，n参考以上，类似命令<code>cmin</code>是<strong>被修改过状态</strong>的</p></li> <li><p>mindepth：从第n级目录开始搜索</p></li> <li><p>maxdepath：至多搜索到第n级，适合根目录下搜索</p></li> <li><p>type：按类型，参数如下</p> <ul><li>f：文件</li> <li>d：目录</li> <li>l：链接文件，如<code>/etc/init.d</code></li> <li>b：块设备文件，如<code>/dev</code>目录下</li> <li>c：字符设备文件，如<code>/dev</code>目录下</li> <li>p：通道文件，如systemd命令集、docker程序等会有</li></ul></li> <li><p>其他命令</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># -prune：排除，写在其他选项之前，一般和path一起用</span>
+<span class="token comment"># 查找当前目录下所有普通文件、文件大小必须大于500字节</span>
+<span class="token comment"># 但排除 test目录 和 opt目录，但，</span>
+<span class="token function">find</span> <span class="token builtin class-name">.</span> -path ./test -prune -o -path ./opt -prune -o -tyep f -a -size +500
+
+<span class="token comment"># -perm：按权限，必须熟悉权限编号</span>
+<span class="token comment"># 即所有者可读可写</span>
+<span class="token function">find</span> <span class="token builtin class-name">.</span> -perm <span class="token number">600</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li></ul></li> <li><p><strong>执行命令</strong>：搜索到的文件，所执行的命令</p> <ul><li><p>print：默认，打印显示</p></li> <li><p>exec：格式 <code>-exec [命令] {} \;</code>，<code>{}</code>表示搜索结果</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>　<span class="token comment"># 删除/var/log下大于7天的日志文件</span>
+　<span class="token function">find</span> /var/log -name <span class="token string">'*.log'</span> -mtime +7 -exec <span class="token function">rm</span> -f <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>ok：等于exec，每条搜索结果执行都会询问？y/n</p></li></ul></li></ul> <h3 id="grep-匹配字符"><a href="#grep-匹配字符" class="header-anchor">#</a> [grep] 匹配字符</h3> <p>搜索文件内的字符串，返回所在行，格式<code>grep -[选项] [匹配条件] [搜索对象]</code></p> <ul><li><p><code>[匹配条件]</code>：即字符串，支持<code>pattern</code>正则形式，建议加上双引号</p></li> <li><p><code>[搜索对象]</code>：</p> <ul><li>单个文本：如某一文件(即可读取的文本内容)或某个搜索结果，返回<code>[匹配条件]</code>的所在行</li> <li>多个文件： 即有多个文本，返回格式<code>文件路径:(行号:)所在行</code>，路径为<strong>相对路径</strong></li> <li>目录：不支持，提示这是个目录，需要加递归选项搜索</li></ul></li> <li><p><strong>选项</strong></p> <ul><li><p>i：忽略大小写</p></li> <li><p>n：加上行号</p></li> <li><p>r：递归搜索，搜索对象为目录时</p></li> <li><p>l：只返回匹配的<code>文件路径</code>，适合<code>[搜索对象]</code>为多个文件时</p></li> <li><p>v：反向选取，即返回没有匹配的行</p></li> <li><p>o：只返回匹配的字符串</p></li> <li><p>其他</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># - A：匹配结果，后面加n行，n为选项参数值</span>
+<span class="token comment"># - B：匹配结果，前面加n行</span>
+<span class="token comment"># - C：匹配结果，前后加n行</span>
+<span class="token comment"># --exclude-dir=’排除文件目录，支持正则'</span>
+
+<span class="token comment"># -E：自定义，比如正则</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li></ul></li></ul> <h3 id="cut-选取显示"><a href="#cut-选取显示" class="header-anchor">#</a> [cut] 选取显示</h3> <ul><li>b：以字节为单位分割</li> <li>c：以字符为单位分割</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 选择tmp.cc文件中文本第2列的字符</span>
+<span class="token function">cat</span> tmp.cc <span class="token operator">|</span> <span class="token function">cut</span> -b <span class="token number">2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="运维命令"><a href="#运维命令" class="header-anchor">#</a> 运维命令</h2> <h3 id="用户管理"><a href="#用户管理" class="header-anchor">#</a> 用户管理</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 新建普通用户，生成默认主目录/home/huhuhan。adduser和useradd类似</span>
+<span class="token function">useradd</span> huhuhan
+<span class="token comment"># 设置密码</span>
+<span class="token function">passwd</span> huhuhan
+<span class="token comment"># 查看权限</span>
+<span class="token function">cat</span> /etc/password
+<span class="token comment"># 修改某目录所有者给该用户，即某目录用户可以任意操作。</span>
+<span class="token function">chown</span> -R huhuhan /ws/web
+<span class="token comment"># 修改配置文件，最后用wq!强制保存才可以覆盖</span>
+<span class="token function">vi</span> /etc/sudoers
+<span class="token comment"># 找到如下代码，新增1条记录</span>
+<span class="token comment">#	## Allow root to run any commands anywhere</span>
+<span class="token comment">#	root    ALL=(ALL)     ALL</span>
+<span class="token comment"># 后续使用，只需加su前缀即可获取root权限</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 用户删除。不会删除/home/huhuhan目录</span>
+<span class="token function">userdel</span> huhuhan
+<span class="token comment"># 同时删除目录</span>
+<span class="token function">userdel</span> huhuhan -r
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 修改用户</span>
+<span class="token comment"># -l 重命名。/home/huhuhan不变</span>
+<span class="token function">usermod</span> huhuhan -l huhuhan_1
+<span class="token comment"># 添加用户到gTest组</span>
+<span class="token function">usermod</span> -g gTest huhuhan
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 添加组</span>
+<span class="token function">groupadd</span> gTest
+<span class="token comment"># 删除组</span>
+grouodel gTest
+<span class="token comment"># 查看用户所在组</span>
+grouds root
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="df-显示挂载信息"><a href="#df-显示挂载信息" class="header-anchor">#</a> [df] 显示挂载信息</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#可读格式，按K\M\G显示，1024换算，-H按1000换算</span>
+<span class="token function">df</span> -h
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="fdisk-分区"><a href="#fdisk-分区" class="header-anchor">#</a> [fdisk] 分区</h3> <p>添加硬盘后，还需要系统分区、挂载才可使用</p> <p><img src="https://fastly.jsdelivr.net/gh/huhuhan/img@master/md/pic/20201216143847.png" alt=""></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查看分区，如上图，/dev/sda为系统盘，/dev/sdb是后续加的硬盘，分了一个区，还剩16G</span>
+<span class="token function">fdisk</span> -l
+<span class="token comment"># 分区操作</span>
+<span class="token function">fdisk</span> /dev/sdb
+<span class="token comment"># 输入p，当前分区情况</span>
+<span class="token comment"># 输入d，删除某分区</span>
+<span class="token comment"># 输入t，修改某分区类型</span>
+<span class="token comment"># 更多命令看相关资料</span>
+
+<span class="token comment"># 分区操作步骤</span>
+<span class="token comment"># 1. 输入n，添加一个新的分区，n是new的首字母</span>
+<span class="token comment"># 2. 输入p，p表示主分区，e表示扩展分区（比较小就几十M）</span>
+<span class="token comment"># 3. 根据提示选择分区编号</span>
+<span class="token comment"># 4. 选择大小区间，起始值。可以用Enter取默认起始值</span>
+<span class="token comment"># 5. 选择大小区间，结束值。可以用[+8G]形式，这样避免计算</span>
+<span class="token comment"># 6. 输入w，保存退出</span>
+
+
+<span class="token comment"># 同步磁盘，分区完毕后执行下，否则下面创建文件系统可能找不到</span>
+partprobe
+
+<span class="token comment"># 文件系统类型有ext2、ext3(日志)、ext4、vfat、msdos、jfs、reiserfs</span>
+<span class="token function">mkfs</span> -t ext4 /dev/sdb2
+
+<span class="token comment"># 配置系统启动自动挂载，否则重启就没了</span>
+<span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">`</span>blkid /dev/sdb2 <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$2</span>}'</span> <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">'s/<span class="token entity" title="\&quot;">\&quot;</span>//g'</span><span class="token variable">`</span></span> /yh ext4 defaults <span class="token number">0</span> <span class="token number">0</span> <span class="token operator">&gt;&gt;</span> /etc/fstab
+<span class="token comment"># 查看配置</span>
+<span class="token function">cat</span> /etc/fstab
+<span class="token comment"># 最后挂载分区到一个空目录下</span>
+<span class="token function">mkdir</span> /yh
+<span class="token function">mount</span> /dev/sdb2 /yh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h3 id="swapon-交换"><a href="#swapon-交换" class="header-anchor">#</a> [swapon] 交换</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查看交换空间数据</span>
+<span class="token function">free</span> -h
+<span class="token function">swapon</span> -s
+<span class="token comment"># 查看swap利用率，0表示优先使用物理内存，一般设置30</span>
+<span class="token function">cat</span> /proc/sys/vm/swappiness
+<span class="token comment"># 临时修改利用率</span>
+sysctl vm.swappiness<span class="token operator">=</span><span class="token number">10</span>
+<span class="token comment"># 永久修改利用率，配置文件修改vm.swappiness，重启系统</span>
+<span class="token function">vi</span> /etc/sysctl.conf
+
+<span class="token comment"># 新建，方式一，用分区创建swap，参考fdisk分区操作</span>
+<span class="token function">fdisk</span> /dev/vdb
+<span class="token comment"># 1. 输入n，添加一个新的分区，n是new的首字母</span>
+<span class="token comment"># 2. 输入p，p表示主分区，e表示扩展分区（比较小就几十M）</span>
+<span class="token comment"># 3. 根据提示选择分区编号</span>
+<span class="token comment"># 4. 选择大小区间，起始值。可以用Enter取默认起始值</span>
+<span class="token comment"># 5. 选择大小区间，结束值。可以用[+8G]形式，这样避免计算</span>
+<span class="token comment"># 6.1 输入t，修改分区类型</span>
+<span class="token comment"># 6.2 输入L，可以查看所有文件类型，可以发现82编号是Linux swap / Solaris</span>
+<span class="token comment"># 7，输入82</span>
+<span class="token comment"># 8. 输入p，查看分区情况</span>
+<span class="token comment"># 9. 输入w，保存退出</span>
+
+<span class="token comment"># 新建，方式二，新建文件形式，用dd命令</span>
+<span class="token comment"># if =输入文件（或设备名称），of =输出文件（或设备名称），count=大小，bs=单位</span>
+<span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/zero <span class="token assign-left variable">of</span><span class="token operator">=</span>/swapfile <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">2048</span> <span class="token assign-left variable">bs</span><span class="token operator">=</span>1M
+<span class="token comment"># 验证文件是否生成</span>
+<span class="token function">ls</span> / <span class="token operator">|</span> <span class="token function">grep</span> swapfile
+<span class="token comment"># 赋予权限，改为只有所有者的读写权限</span>
+<span class="token function">chmod</span> <span class="token number">600</span> /swapfile
+
+<span class="token comment"># 格式化Swap，不管上面那种方式新建，都要格式化。假设分区是/dev/vdb1</span>
+<span class="token function">mkswap</span> /dev/vdb1
+<span class="token comment"># 激活Swap</span>
+<span class="token function">swapon</span> /dev/vdb1
+<span class="token comment"># 查询命令可以看到了</span>
+<span class="token function">free</span> -h
+<span class="token function">swapon</span> -s
+<span class="token comment"># 设置开机启动,修改/etc/fstab文，默认重启无法生效</span>
+<span class="token comment"># UUID=e6b78ad5-ae5a-4091-81b9-0c701e14620f swap swap defaults 0 0</span>
+<span class="token comment"># 其中UUID可以用文件名替代，id格式化时可以得到，或用[blkid]命令查询</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;/dev/vdb1 swap swap defaults 0 0&quot;</span> <span class="token operator">&gt;&gt;</span> /etc/fstab
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div><h3 id="mount-挂载"><a href="#mount-挂载" class="header-anchor">#</a> [mount] 挂载</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># root权限执行， 其他用户加命令sudo</span>
+<span class="token comment"># 版本信息</span>
+<span class="token function">mount</span> -V
+<span class="token comment"># 可用命令</span>
+<span class="token function">mount</span> -h
+<span class="token comment"># -v：详情，-f：模拟挂载，非实际操作, /dev/test必须存在</span>
+<span class="token function">mount</span> -vf /dev/test /mount/test
+<span class="token comment"># -t：指定类型，比如虚拟机virtualBox的文件类型,将共享目录share，挂载当前目录share（先创建）</span>
+<span class="token function">mount</span> -t vboxsf share ~/share
+<span class="token comment"># 挂载结果，通过df命令查看</span>
+
+<span class="token comment"># 卸除挂载，指定设备名或挂载点都可以</span>
+<span class="token function">umount</span> -v /dev/test
+<span class="token function">umount</span> -v /mount/test
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="du-显示目录大小"><a href="#du-显示目录大小" class="header-anchor">#</a> [du] 显示目录大小</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 可读格式，按K\M\G显示</span>
+<span class="token function">du</span> -h
+<span class="token comment"># 只显示当前系统的当前目录（1层），不包含子目录</span>
+<span class="token function">du</span> -h --max-depth<span class="token operator">=</span><span class="token number">1</span>
+<span class="token comment"># 显示大于10M的目录，-10M表示小于</span>
+<span class="token function">du</span> -t 10M /var/log
+<span class="token comment"># --exclude= 排除某目录、文件</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="journalctl-日志命令"><a href="#journalctl-日志命令" class="header-anchor">#</a> [journalctl]  日志命令</h3> <p>系统内核、由Systemctl可控制的应用日志</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 应用状态日志</span>
+systemctl status xx.service
+<span class="token comment"># 显示某应用日志，[u]指定应用，配合[f]等参数使用</span>
+journalctl -u xx.service
+<span class="token comment"># 日志占用的磁盘空间</span>
+journalctl --disk-usage
+<span class="token comment"># 设置日志占用的空间，多出的直接删掉</span>
+journalctl --vacuum-size<span class="token operator">=</span>500M
+<span class="token comment"># 设置日志保存的时间</span>
+journalctl --vacuum-time<span class="token operator">=</span>1month
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="lsof-查看进程"><a href="#lsof-查看进程" class="header-anchor">#</a> [lsof]  查看进程</h3> <ul><li><p>查看和进程有关的Linux文件（普通文件、目录、设备、网络文件，都算Linux上的文件）</p></li> <li><p>建议<strong>ROOT权限</strong>使用，否则只能查到当前用户创建的进程</p></li> <li><p>选项例子</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># -i 查看网络文件，</span>
+<span class="token function">lsof</span> -i
+
+<span class="token comment"># :[端口]，支持范围查询</span>
+<span class="token function">lsof</span> -i :22
+<span class="token function">lsof</span> -i :8200-8300 
+<span class="token comment"># tcp、udp</span>
+<span class="token function">lsof</span> -i tcp
+<span class="token function">lsof</span> -i tcp:1-1000
+<span class="token comment"># 网络类型 IPv4、IPv6</span>
+<span class="token function">lsof</span> -i <span class="token number">4</span>或6
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查看某文件</span>
+<span class="token function">lsof</span> /bin/bash
+<span class="token comment"># -c 查看某进程，按进程名右模糊搜索</span>
+<span class="token function">lsof</span> -c docker
+<span class="token comment"># -p 查看某进程号</span>
+<span class="token function">lsof</span> -p <span class="token punctuation">[</span>pid<span class="token punctuation">]</span>
+<span class="token comment"># +d 查看目录下被进程打开的文件</span>
+<span class="token function">lsof</span> +d /var/log
+<span class="token comment"># +D 递归查看目录、目录下的目录等等，被进程打开的文件</span>
+<span class="token function">lsof</span> +D /var/log
+<span class="token comment"># -u 查看某用户打开的文件</span>
+<span class="token function">lsof</span> -i -u ^git <span class="token comment">#排除git用户的数据</span>
+<span class="token comment"># -t 只显示查询结果中的进程号，参数要在最前面</span>
+<span class="token function">lsof</span> -ti
+<span class="token function">lsof</span> -t -i
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></li></ul> <h3 id="netstat-网络信息"><a href="#netstat-网络信息" class="header-anchor">#</a> [netstat] 网络信息</h3> <p>显示各种网络协议的相关信息</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># a:所有网络，包括t:TCP、u:UDP、x:Unix socket </span>
+<span class="token function">netstat</span> -a
+<span class="token comment"># TCP网络</span>
+<span class="token function">netstat</span> -at
+<span class="token comment"># n直接输出，信息简化，速度快</span>
+<span class="token function">netstat</span> -atn
+<span class="token comment"># p 加上进程号</span>
+<span class="token function">netstat</span> -atnp
+<span class="token comment"># l 显示监听端口，a是所有端口，不能共用</span>
+<span class="token function">netstat</span> -ltnp
+
+<span class="token comment"># s 每个协议的接受/发送包数量</span>
+<span class="token comment"># i 网卡信息</span>
+<span class="token comment"># r 路由信息</span>
+<span class="token comment"># g 多播组信息</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="ps-进程信息"><a href="#ps-进程信息" class="header-anchor">#</a> [ps] 进程信息</h3> <ul><li>e：显示所有进程</li> <li>f：与进程的关系，与e参数一起用</li> <li>u：指定用户的进程，默认当前用户</li></ul> <h3 id="kill-发送信号"><a href="#kill-发送信号" class="header-anchor">#</a> [kill] 发送信号</h3> <p>默认发送TERM信号，即终止进程</p> <ul><li>l：查看全部信号
+<ul><li>9：强制终止，最常用</li> <li>15：终止，但可能释放资源时阻塞了</li></ul></li></ul> <h3 id="top-动态进程信息"><a href="#top-动态进程信息" class="header-anchor">#</a> [top] 动态进程信息</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>第一行|top：系统时间、开机时长、登录用户数量、1、5、15分钟的负载情况
+第一行|进程统计：运行、休眠、停止、zombie状态（僵尸）
+第三行|cpu情况：us（用户空间占比）、sy（内核空间占比）、ni（改变优先级进程占比）、id（空闲占比）、wa（io等待占比）、hi（硬中断占比）、si（软中断占比）
+第四行|内存情况：物理总量、空闲总量、使用总量、缓存总量
+第五行|交换分区：交换总量、空闲总量、使用总量、可用总量
+最后|进程监控：其中pr（优先级），ni（负值为高优先级），virt（内存），res（未交换出的内存）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li>p：指定进程号</li> <li>u：指定用户</li> <li>i：不显示空闲的进程</li> <li>n：刷新次数，结束自动退出</li> <li>c：最后列显示完整命令</li></ul> <h3 id="ping-网络通信"><a href="#ping-网络通信" class="header-anchor">#</a> [ping] 网络通信</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># host:具体网络</span>
+<span class="token function">ping</span> <span class="token function">host</span>
+<span class="token comment"># 10次，间隔1秒</span>
+<span class="token function">ping</span> -c <span class="token number">10</span> -i <span class="token number">1</span> <span class="token function">host</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="free-查看内存"><a href="#free-查看内存" class="header-anchor">#</a> [free] 查看内存</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 单位参数有b、k、m、g，默认k，	</span>
+<span class="token function">free</span> -g
+<span class="token comment"># 显示总内存行，默认一行内存、一行交换分区</span>
+<span class="token function">free</span> -t 
+<span class="token comment"># 每间隔3秒显示</span>
+<span class="token function">free</span> -s <span class="token number">3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="ifconfig-查看网络设备"><a href="#ifconfig-查看网络设备" class="header-anchor">#</a> [ifconfig] 查看网络设备</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 一般Linux的网卡设备是eth0。结果第2行就是IP</span>
+<span class="token function">ifconfig</span> eth0
+<span class="token comment"># 精准获取</span>
+<span class="token function">ifconfig</span> eth0 <span class="token operator">|</span> <span class="token function">grep</span> inet <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$2</span>}'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="系统命令"><a href="#系统命令" class="header-anchor">#</a> 系统命令</h2> <h3 id="重定向输出输入"><a href="#重定向输出输入" class="header-anchor">#</a> 重定向输出输入</h3> <ul><li><p>0：标准输入</p></li> <li><p>1：标准输出，控制台，常常忽略如<code>&gt;/dev/null</code>即<code>1&gt;/dev/null</code></p></li> <li><p>2：错误输出</p></li> <li><p><code>&gt;</code>：输出重定向，<strong>先删除文件</strong>再创建输入到该文件，</p></li> <li><p><code>&gt;&gt;</code>：输出重定向，文件存在（不存在则创建），<strong>直接追加</strong>到该文件末尾</p></li> <li><p><code>&lt;</code>：输入重定向。<code>&lt;&lt;</code>同理</p></li> <li><p><code>/dev/null</code>：空设备，直接丢弃，不占空间</p></li> <li><p>例子</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 后台挂起运行名 nohup [...] &amp; 这处将2重定向给1，再都输出到空设备</span>
+<span class="token function">nohup</span> <span class="token punctuation">[</span>执行命名<span class="token punctuation">]</span> <span class="token operator">&gt;</span>/dev/null <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span><span class="token file-descriptor important">&amp;1</span> <span class="token operator">&amp;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ul> <h3 id="nohup-后台挂起"><a href="#nohup-后台挂起" class="header-anchor">#</a> [nohup] 后台挂起</h3> <p>格式：<code>nohubp 命令 &amp;</code>。默认生成<code>nohup.out</code>标准输出文件，除非命令中有指定重定向输出</p> <h3 id="last-登录用户记录"><a href="#last-登录用户记录" class="header-anchor">#</a> [last] 登录用户记录</h3> <p>显示登录用户记录
+列名用户、终端（pts为图像终端如ssh，tty为直接连接，数字为编号）、登录ip、开始时间、结束时间、持续时间（login in当前登录中）</p> <ul><li>[lastlog]
+显示所有用户的登录记录</li></ul> <h3 id="hostnamectl-主机名"><a href="#hostnamectl-主机名" class="header-anchor">#</a> [hostnamectl] 主机名</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查询</span>
+hostnamectl status
+<span class="token comment"># 修改</span>
+hostnamectl set-hostname yhxx
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="系统信息"><a href="#系统信息" class="header-anchor">#</a> 系统信息</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查看内核版本</span>
+<span class="token function">uname</span> -r
+<span class="token function">uname</span> -a
+
+<span class="token comment"># 查看发行版本</span>
+<span class="token function">cat</span> /etc/redhat-release
+
+<span class="token comment"># 查看环境变量</span>
+<span class="token function">env</span>
+<span class="token builtin class-name">export</span>
+<span class="token comment"># 环境变量加载文件</span>
+<span class="token comment"># /etc/environment -&gt; /etc/profile -&gt; ~/.profile</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="sed-输入"><a href="#sed-输入" class="header-anchor">#</a> [sed] 输入</h3> <p>适合docker容器镜像中，没有vi等编辑命令时使用
+参数[i]为编辑模式</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 以行数形式输出文本</span>
+<span class="token function">cat</span> -n demo.txt
+<span class="token comment"># 在demo.txt文件第5行插入一行hello world</span>
+<span class="token function">sed</span> -i <span class="token string">&quot;5i\ hello world&quot;</span> demo.txt
+<span class="token comment"># 删除第6到9行代码，包括6,9</span>
+<span class="token function">sed</span> -i <span class="token string">&quot;6,9d&quot;</span> demo.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="service"><a href="#service" class="header-anchor">#</a> [service]</h3> <p>调用/etc/init.d下的服务脚本，可用systemctl替代</p> <h3 id="chkconfig"><a href="#chkconfig" class="header-anchor">#</a> chkconfig</h3> <p>设置服务运行级别，可用systemctl替代</p> <h3 id="history-命令记录"><a href="#history-命令记录" class="header-anchor">#</a> [history] 命令记录</h3> <p>查看历史命令记录</p> <h2 id="插件命令"><a href="#插件命令" class="header-anchor">#</a> 插件命令</h2> <h3 id="rpm"><a href="#rpm" class="header-anchor">#</a> [rpm]</h3> <ul><li>软件包管理器，包括其他命令下载的软件包，比如<code>yum</code></li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#显示源文件</span>
+<span class="token function">rpm</span> -qa <span class="token punctuation">[</span><span class="token operator">|</span> <span class="token function">grep</span> docker<span class="token punctuation">]</span>
+<span class="token comment">#删除</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="yum"><a href="#yum" class="header-anchor">#</a> [yum]</h3> <ul><li>在线安装软件命令，通过软件源仓库中的地址下载RPM包安装软件，自动处理依赖关系</li> <li>下载的包应该在<code>/var/cache/yum</code>下，可以清除</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#显示已安装包</span>
+yum list installed <span class="token punctuation">[</span><span class="token operator">|</span> <span class="token function">grep</span> docker<span class="token punctuation">]</span>
+<span class="token comment"># 清除</span>
+yum clean <span class="token punctuation">[</span><span class="token punctuation">]</span>
+yum cleal all
+<span class="token comment">#删除</span>
+yum remove <span class="token punctuation">[</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="wget-下载"><a href="#wget-下载" class="header-anchor">#</a> [wget] 下载</h3> <p>支持HTTP\HTTPS\FTP等协议下载文件</p> <h2 id="环境变量"><a href="#环境变量" class="header-anchor">#</a> 环境变量</h2> <p>set|env|export</p> <h2 id="防火墙常用命令"><a href="#防火墙常用命令" class="header-anchor">#</a> 防火墙常用命令</h2> <p>此处为firewall软件，非iptable</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>	--permanent：	永久生效
+	--zone：		区域，有多个，默认为public
+	--get：			查看属性，接[-属性]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查看firewall是否运行，注意是firewalld</span>
+systemctl status firewalld
+firewall-cmd --state
+<span class="token comment"># 设置开机自启动</span>
+systemctl <span class="token builtin class-name">enable</span> firewalld
+<span class="token comment"># 禁用开机自启动</span>
+systemctl disable firewalld
+<span class="token comment"># 查看是否开机自启动</span>
+systemctl is-enabled firewalld
+
+<span class="token comment"># 查看现有的规则</span>
+iptables -nL
+<span class="token comment"># 重载防火墙配置</span>
+firewall-cmd --reload
+<span class="token comment"># 查看默认区域</span>
+firewall-cmd --get-default-zone
+<span class="token comment"># 添加某个单端口 --permanent永久生效</span>
+firewall-cmd --permanent --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span><span class="token number">81</span>/tcp
+<span class="token comment"># 删除某个端口</span>
+firewall-cmd --permanent --zone<span class="token operator">=</span>public --remove-port<span class="token operator">=</span><span class="token number">81</span>/tcp
+<span class="token comment"># 查看端口</span>
+firewall-cmd --zone<span class="token operator">=</span>public --list-ports
+firewall-cmd --zone<span class="token operator">=</span>public --query-port<span class="token operator">=</span><span class="token number">80</span>/tcp
+<span class="token comment"># 重载配置</span>
+firewall-cmd --reload
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h2 id="云服务器外网环境部署"><a href="#云服务器外网环境部署" class="header-anchor">#</a> 云服务器外网环境部署</h2> <p>容易被黑客扫描攻击，常见现象为：安装定时任务、异常任务占满CPU
+<strong>注意事项：</strong></p> <ul><li>安装的软件需设置或修改默认密码和端口</li> <li>sshd设置
+<ul><li>修改sshd默认端口；</li> <li>禁用密码登录，采用秘钥登录；</li> <li>设置root账户登录失败次数；</li> <li>设置内网ip登录</li></ul></li> <li>安全组入规则接口开放
+<strong>解决方式</strong></li> <li>top查看进程信息，记录异常进程号</li> <li>lastlastlog查看异常登录的用户和ip</li> <li>crontab -l -u 用户查看异常用户的定时任务</li> <li>crontab -e -u 用户编辑删除异常定时任务，记下定时任务路径</li> <li>kill -9 异常进程号杀死1中发现的异常进程号</li> <li>rm -rf 异常任务目录删除5中发现的异常任务目录</li></ul> <h2 id="运维参考"><a href="#运维参考" class="header-anchor">#</a> 运维参考</h2> <h3 id="禁用root"><a href="#禁用root" class="header-anchor">#</a> 禁用ROOT</h3> <blockquote><p>前提需先创建一个用户有管理员权限。<a href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86">参考</a></p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">vi</span> /etc/ssh/sshd_config
+<span class="token comment"># 找到PermitRootLogin yes	禁用root登录ssh</span>
+
+<span class="token comment"># 重启sshd</span>
+systemctl restart sshd
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="禁用口令登录"><a href="#禁用口令登录" class="header-anchor">#</a> 禁用口令登录</h3> <p>公钥私钥生成参考<a href="/blog/views/git/git-ssh.html">git-ssh</a></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">vi</span> /etc/ssh/sshd_config
+
+<span class="token comment"># 找到PasswordAuthentication no 禁止使用基于口令认证的方式登陆</span>
+<span class="token comment"># 找到PubkeyAuthentication yes 允许使用基于密钥认证的方式登陆</span>
+
+<span class="token comment"># 重启sshd</span>
+systemctl restart sshd
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2022/5/27 上午11:15:53</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.48fbceba.js" defer></script><script src="/blog/assets/js/3.6aecd760.js" defer></script><script src="/blog/assets/js/1.be01cd42.js" defer></script><script src="/blog/assets/js/47.23e5676d.js" defer></script>
+  </body>
+</html>
